@@ -1,528 +1,1087 @@
-<!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP (content adapted for Locksmith services)
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<style>
-			.site-header {
-				background: #222;
-				color: #0074c2;
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				justify-content: center;
-				padding: 30px 10px 0 10px;
-				font-family: Arial, sans-serif;
-				border-bottom: none;
-			}
-			.site-header .logo {
-				display: flex;
-				align-items: center;
-				justify-content: flex-start;
-				margin-right: 30px;
-			}
-			.site-header .logo a {
-				display: inline-block;
-			}
-			.site-header .logo img {
-				height: 160px;
-				max-width: 100%;
-			}
-			.site-header .contact-info {
-				display: flex;
-				gap: 40px;
-				align-items: center;
-				justify-content: flex-start;
-			}
-			/* Remove any border or background from the next element after header */
-			#header {
-				border-top: none !important;
-				margin-top: 0 !important;
-			}
-			.site-header .contact-item {
-				display: flex;
-				align-items: center;
-				gap: 8px;
-				font-size: 1.2em;
-				font-weight: bold;
-			}
-			.site-header .contact-item i {
-				font-size: 22px;
-			}
-			@media (max-width: 700px) {
-				.site-header {
-					flex-direction: column;
-					align-items: center;
-					padding: 15px;
-				}
-				.site-header .contact-info {
-					flex-direction: column;
-					gap: 10px;
-					margin-top: 10px;
-				}
-			}
-		</style>
-				<style>
-				/* Remove white line between header and nav */
-				#page-wrapper {
-					border-top: none !important;
-				}
-				#header {
-					border-top: none !important;
-				}
-				.site-header {
-					border-bottom: none !important;
-				}
-				/* Remove any white background or border above nav */
-				nav#nav {
-					border-top: none !important;
-				}
-				</style>
-		<title>24/7 Locksmith Southfield, MI & Surrounding Areas | Car, Home, Business</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Trusted Southfield locksmith offering 24/7 emergency lockout service, car key replacement, home rekeying, and commercial security solutions. Fast, local & licensed. Call (313) 889-3266 for immediate help.">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="homepage is-preload">
-		<header class="site-header">
-			<div class="logo">
-				<a href="index.html">
-					<img src="images/Logo.png" alt="Locksmith Logo">
-				</a>
-			</div>
-			<div class="contact-info">
-				<div class="contact-item">
-					<i>📞</i>
-					<a href="tel:3138893266" style="color: #0074c2; text-decoration: none; font-weight: bold;">313-889-3266</a>
-				</div>
-				<div class="contact-item">
-					<i>📧</i>
-					<a href="mailto:carcommercialresidentiallocks@gmail.com" style="color: #0074c2; text-decoration: none; font-weight: bold;">Email Us</a>
-				</div>
-				<div class="contact-item">
-					<i>📍</i>
-					<span>Southfield Michigan 48076 United State</span>
-				</div>
-			</div>
-		</header>
-		<div id="page-wrapper">
+  <head>
+    <title>
+      24/7 Emergency Locksmith | Southfield, MI & Surrounding Areas | Car, Home,
+      Business | Fast Response | (313) 889-3266
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trusted Southfield locksmith offering 24/7 emergency lockout service, car key replacement, home rekeying, and commercial security solutions. Fast, local & licensed. Call (313) 889-3266 for immediate help."
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="homepage is-preload">
+    <header class="site-header">
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="images/Logo.png"
+              alt="CCR Locksmith - 24/7 Emergency Services"
+            />
+          </a>
+        </div>
+        <div class="quick-contact">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:carcommercialresidentiallocks@gmail.com"
+              >Email Us</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <span>24/7 Emergency</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Southfield, MI 48076</span>
+          </div>
+          <a class="cta-button" href="tel:3138893266">Call Now</a>
+        </div>
+      </div>
+    </header>
 
-			<!-- Header -->
-				<div id="header">
+    <!-- TODO: Improve Trust Indicators -->
+    <!-- TODO: Separate -->
+    <div class="trust-bar">
+      <div class="trust-items">
+        <div class="trust-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>Licensed & Insured</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-award"></i>
+          <span>5-Year Warranty</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-clock"></i>
+          <span>24/7 Response</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-star"></i>
+          <span>Local Experts</span>
+        </div>
+      </div>
+    </div>
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Car · Commercial · Residential · Emergency Locksmith</a></h1>
-								<p>Southfield & Surrounding Areas, Michigan — Fast, professional, and reliable locksmith services backed by a 5‑Year Warranty.</p>
-							</header>
-							<footer>
-								<a href="#banner" class="button circled scrolly">Start</a>
-							</footer>
-						</div>
+    <div id="page-wrapper">
+      <!-- Header -->
+      <div id="header">
+        <!-- Nav -->
+        <!-- TODO: Improve nav styles -->
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+              <a href="automotive.html">Automotive</a>
+              <ul>
+                <li>
+                  <a href="automotive/broken-key-extraction.html"
+                    >Broken Key Extraction</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/car-key-duplication-cutting.html"
+                    >Car Key Duplication & Cutting</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/car-key-replacement.html"
+                    >Car Key Replacement</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/car-lockout-service.html"
+                    >Car Lockout Service</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/ecu-immobilizer-reflashing.html"
+                    >ECU/Immobilizer Reflashing</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/emergency-car-key-replacement.html"
+                    >Emergency Car Key Replacement</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/ignition-switch-repair.html"
+                    >Ignition Switch Repair</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/ignition-switch-replacement.html"
+                    >Ignition Switch Replacement</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/key-fob-remote-programming.html"
+                    >Key Fob & Remote Programming</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/key-shell-replacement.html"
+                    >Key Shell Replacement</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/laser-cut-high-security-key-cutting.html"
+                    >Laser Cut & High Security Key Cutting</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/motorcycle-key-replacement.html"
+                    >Motorcycle Key Replacement</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/smart-key-proximity-key-programming.html"
+                    >Smart Key & Proximity Key Programming</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/transponder-key-programming.html"
+                    >Transponder Key Programming</a
+                  >
+                </li>
+                <li>
+                  <a href="automotive/trunk-lockout-service.html"
+                    >Trunk Lockout Service</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="commercial.html">Commercial</a>
+              <ul>
+                <li>
+                  <a href="business-office-lockout.html"
+                    >Business & Office Lockout Service</a
+                  >
+                </li>
+                <li>
+                  <a href="commercial-lock-rekeying.html"
+                    >Commercial Lock Rekeying</a
+                  >
+                </li>
+                <li>
+                  <a href="master-key-system-installation.html"
+                    >Master Key System Installation</a
+                  >
+                </li>
+                <li>
+                  <a href="commercial-grade-lock-installation-repair.html"
+                    >Commercial-Grade Lock Installation & Repair</a
+                  >
+                </li>
+                <li>
+                  <a href="high-security-lock-installation.html"
+                    >High-Security Lock Installation</a
+                  >
+                </li>
+                <li>
+                  <a href="#">Door Hardware & Security</a>
+                  <ul>
+                    <li>
+                      <a href="panic-bar-push-bar-installation.html"
+                        >Panic Bar & Push Bar Installation</a
+                      >
+                    </li>
+                    <li>
+                      <a href="panic-bar-push-bar-repair.html"
+                        >Panic Bar & Push Bar Repair</a
+                      >
+                    </li>
+                    <li>
+                      <a href="door-closer-installation-repair.html"
+                        >Door Closer Installation & Repair</a
+                      >
+                    </li>
+                    <li>
+                      <a href="exit-device-installation-service.html"
+                        >Exit Device Installation & Service</a
+                      >
+                    </li>
+                    <li>
+                      <a href="mortise-lock-installation-repair.html"
+                        >Mortise Lock Installation & Repair</a
+                      >
+                    </li>
+                    <li>
+                      <a href="eviction-locksmith-services.html"
+                        >Eviction Locksmith Services</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Advanced Access Control Systems</a>
+                  <ul>
+                    <li>
+                      <a href="access-control-system-installation.html"
+                        >Access Control System Installation</a
+                      >
+                    </li>
+                    <li>
+                      <a href="electronic-keypad-lock-installation.html"
+                        >Electronic Keypad Lock Installation</a
+                      >
+                    </li>
+                    <li>
+                      <a href="card-reader-proximity-reader-systems.html"
+                        >Card Reader & Proximity Reader Systems</a
+                      >
+                    </li>
+                    <li>
+                      <a href="magnetic-lock-installation.html"
+                        >Magnetic Lock (Maglock) Installation</a
+                      >
+                    </li>
+                    <li>
+                      <a href="electric-strike-installation-repair.html"
+                        >Electric Strike Installation & Repair</a
+                      >
+                    </li>
+                    <li>
+                      <a href="biometric-lock-systems.html"
+                        >Biometric Lock Systems</a
+                      >
+                    </li>
+                    <li>
+                      <a href="buzzer-intercom-system-installation.html"
+                        >Buzzer & Intercom System Installation</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Commercial Safe Services</a>
+                  <ul>
+                    <li>
+                      <a href="commercial-safe-opening-lockout.html"
+                        >Commercial Safe Opening & Lockout</a
+                      >
+                    </li>
+                    <li>
+                      <a href="safe-installation-bolting.html"
+                        >Safe Installation & Bolting</a
+                      >
+                    </li>
+                    <li>
+                      <a href="safe-combination-changing-repair.html"
+                        >Safe Combination Changing & Repair</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="file-cabinet-lock-replacement.html"
+                    >File Cabinet Lock Replacement</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- ...existing code... -->
+            <li>
+              <a href="residential.html">Residential</a>
+              <ul>
+                <li><a href="safe-vault.html">Safe & Vault Services</a></li>
+                <li>
+                  <a href="home-security-consultation.html"
+                    >Home Security Consultation</a
+                  >
+                </li>
+                <li>
+                  <a href="keyless-entry.html"
+                    >Keyless Entry & Keypad Lock Installation</a
+                  >
+                </li>
+                <li>
+                  <a href="smart-home-security.html"
+                    >Advanced & Smart Home Security</a
+                  >
+                </li>
+                <li><a href="master-key-system.html">Master Key System</a></li>
+                <li>
+                  <a href="key-system-services.html">Key & System Services</a>
+                </li>
+                <li>
+                  <a href="mailbox-lock.html">Mailbox Lock Replacement</a>
+                </li>
+                <li>
+                  <a href="window-lock.html"
+                    >Window Lock Installation & Repair</a
+                  >
+                </li>
+                <li>
+                  <a href="sliding-door-lock.html"
+                    >Sliding Door & Patio Door Locks</a
+                  >
+                </li>
+                <li>
+                  <a href="high-security-lock.html"
+                    >High-Security Lock Installation</a
+                  >
+                </li>
+                <li>
+                  <a href="deadbolt-installation.html">Deadbolt Installation</a>
+                </li>
+                <li><a href="lock-installation.html">Lock Installation</a></li>
+                <li><a href="rekeying.html">Rekeying Service</a></li>
+                <li>
+                  <a href="lock-repair.html">Lock Repair / Replacement</a>
+                </li>
+                <li>
+                  <a href="broken-key-extraction.html">Broken Key Extraction</a>
+                </li>
+                <li><a href="house-lockout.html">House Lockout Service</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="emergency.html">Emergency</a>
+              <ul>
+                <li>
+                  <a href="emergency-house-lockout.html"
+                    >Emergency House Lockout</a
+                  >
+                </li>
+                <li>
+                  <a href="apartment-condo-lockout.html"
+                    >Apartment & Condo Lockout</a
+                  >
+                </li>
+                <li>
+                  <a href="emergency-lock-rekeying.html"
+                    >Emergency Lock Rekeying</a
+                  >
+                </li>
+                <li>
+                  <a href="burglary-breakin-damage-repair.html"
+                    >Burglary & Break-in Damage Repair</a
+                  >
+                </li>
+                <li>
+                  <a href="emergency-lock-repair-replacement.html"
+                    >Emergency Lock Repair & Replacement</a
+                  >
+                </li>
+                <li>
+                  <a href="car-lockout-service.html">Car Lockout Service</a>
+                </li>
+                <li>
+                  <a href="trunk-lockout-service.html">Trunk Lockout Service</a>
+                </li>
+                <li>
+                  <a href="emergency-car-key-replacement.html"
+                    >Emergency Car Key Replacement (Lost Keys)</a
+                  >
+                </li>
+                <li>
+                  <a href="broken-key-extraction-emergency.html"
+                    >Broken Key Extraction (from Ignition or Door)</a
+                  >
+                </li>
+                <li>
+                  <a href="emergency-ignition-repair.html"
+                    >Emergency Ignition Repair</a
+                  >
+                </li>
+                <li>
+                  <a href="business-office-lockout-emergency.html"
+                    >Business & Office Lockout</a
+                  >
+                </li>
+                <li>
+                  <a href="emergency-commercial-rekeying.html"
+                    >Emergency Commercial Rekeying</a
+                  >
+                </li>
+                <li>
+                  <a href="post-breakin-door-lock-repair.html"
+                    >Post-Break-in Door & Lock Repair</a
+                  >
+                </li>
+                <li>
+                  <a href="emergency-panic-bar-exit-device-repair.html"
+                    >Emergency Panic Bar & Exit Device Repair</a
+                  >
+                </li>
+                <li>
+                  <a href="safe-opening-lockout-service.html"
+                    >Safe Opening & Lockout Service</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="service-areas.html">Service Areas</a>
+              <ul>
+                <li>
+                  <a href="#">Oakland County</a>
+                  <ul>
+                    <li>
+                      <a href="service-areas/southfield.html">Southfield</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/farmington-hills.html"
+                        >Farmington Hills</a
+                      >
+                    </li>
+                    <li><a href="service-areas/novi.html">Novi</a></li>
+                    <li><a href="service-areas/troy.html">Troy</a></li>
+                    <li>
+                      <a href="service-areas/royal-oak.html">Royal Oak</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/birmingham.html">Birmingham</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/bloomfield-hills.html"
+                        >Bloomfield Hills</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service-areas/west-bloomfield.html"
+                        >West Bloomfield</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service-areas/rochester-hills.html"
+                        >Rochester Hills</a
+                      >
+                    </li>
+                    <li><a href="service-areas/pontiac.html">Pontiac</a></li>
+                    <li>
+                      <a href="service-areas/auburn-hills.html">Auburn Hills</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/clarkston.html">Clarkston</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/waterford.html">Waterford</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Wayne County</a>
+                  <ul>
+                    <li><a href="service-areas/detroit.html">Detroit</a></li>
+                    <li><a href="service-areas/dearborn.html">Dearborn</a></li>
+                    <li><a href="service-areas/livonia.html">Livonia</a></li>
+                    <li><a href="service-areas/canton.html">Canton</a></li>
+                    <li><a href="service-areas/westland.html">Westland</a></li>
+                    <li><a href="service-areas/taylor.html">Taylor</a></li>
+                    <li>
+                      <a href="service-areas/dearborn-heights.html"
+                        >Dearborn Heights</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service-areas/allen-park.html">Allen Park</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/lincoln-park.html">Lincoln Park</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/wyandotte.html">Wyandotte</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/romulus-dtw-airport.html"
+                        >Romulus (DTW Airport)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service-areas/garden-city.html">Garden City</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Macomb County</a>
+                  <ul>
+                    <li><a href="service-areas/warren.html">Warren</a></li>
+                    <li>
+                      <a href="service-areas/sterling-heights.html"
+                        >Sterling Heights</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service-areas/clinton-township.html"
+                        >Clinton Township</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service-areas/st-clair-shores.html"
+                        >St. Clair Shores</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service-areas/shelby-township.html"
+                        >Shelby Township</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service-areas/macomb-township.html"
+                        >Macomb Township</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service-areas/roseville.html">Roseville</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/eastpointe.html">Eastpointe</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/mount-clemens.html"
+                        >Mount Clemens</a
+                      >
+                    </li>
+                    <li><a href="service-areas/fraser.html">Fraser</a></li>
+                    <li>
+                      <a href="service-areas/chesterfield.html">Chesterfield</a>
+                    </li>
+                    <li>
+                      <a href="service-areas/new-baltimore.html"
+                        >New Baltimore</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <!-- Inner -->
+        <div class="inner">
+          <h1>Car · Commercial · Residential · Emergency Locksmith</h1>
+          <p>
+            Fast, professional, and reliable emergency response for car, home,
+            and business lockouts. Licensed professionals with 5-year warranty
+            on all services. Servicing Southfield, Michigan & Surrounding Areas
+          </p>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li>
-									<a href="automotive.html">Automotive</a>
-									<ul>
-										<li><a href="automotive/broken-key-extraction.html">Broken Key Extraction</a></li>
-										<li><a href="automotive/car-key-duplication-cutting.html">Car Key Duplication & Cutting</a></li>
-										<li><a href="automotive/car-key-replacement.html">Car Key Replacement</a></li>
-										<li><a href="automotive/car-lockout-service.html">Car Lockout Service</a></li>
-										<li><a href="automotive/ecu-immobilizer-reflashing.html">ECU/Immobilizer Reflashing</a></li>
-										<li><a href="automotive/emergency-car-key-replacement.html">Emergency Car Key Replacement</a></li>
-										<li><a href="automotive/ignition-switch-repair.html">Ignition Switch Repair</a></li>
-										<li><a href="automotive/ignition-switch-replacement.html">Ignition Switch Replacement</a></li>
-										<li><a href="automotive/key-fob-remote-programming.html">Key Fob & Remote Programming</a></li>
-										<li><a href="automotive/key-shell-replacement.html">Key Shell Replacement</a></li>
-										<li><a href="automotive/laser-cut-high-security-key-cutting.html">Laser Cut & High Security Key Cutting</a></li>
-										<li><a href="automotive/motorcycle-key-replacement.html">Motorcycle Key Replacement</a></li>
-										<li><a href="automotive/smart-key-proximity-key-programming.html">Smart Key & Proximity Key Programming</a></li>
-										<li><a href="automotive/transponder-key-programming.html">Transponder Key Programming</a></li>
-										<li><a href="automotive/trunk-lockout-service.html">Trunk Lockout Service</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="commercial.html">Commercial</a>
-									<ul>
-										<li><a href="business-office-lockout.html">Business & Office Lockout Service</a></li>
-										<li><a href="commercial-lock-rekeying.html">Commercial Lock Rekeying</a></li>
-										<li><a href="master-key-system-installation.html">Master Key System Installation</a></li>
-										<li><a href="commercial-grade-lock-installation-repair.html">Commercial-Grade Lock Installation & Repair</a></li>
-										<li><a href="high-security-lock-installation.html">High-Security Lock Installation</a></li>
-										<li><a href="#">Door Hardware & Security</a>
-											<ul>
-												<li><a href="panic-bar-push-bar-installation.html">Panic Bar & Push Bar Installation</a></li>
-												<li><a href="panic-bar-push-bar-repair.html">Panic Bar & Push Bar Repair</a></li>
-												<li><a href="door-closer-installation-repair.html">Door Closer Installation & Repair</a></li>
-												<li><a href="exit-device-installation-service.html">Exit Device Installation & Service</a></li>
-												<li><a href="mortise-lock-installation-repair.html">Mortise Lock Installation & Repair</a></li>
-												<li><a href="eviction-locksmith-services.html">Eviction Locksmith Services</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Advanced Access Control Systems</a>
-											<ul>
-												<li><a href="access-control-system-installation.html">Access Control System Installation</a></li>
-												<li><a href="electronic-keypad-lock-installation.html">Electronic Keypad Lock Installation</a></li>
-												<li><a href="card-reader-proximity-reader-systems.html">Card Reader & Proximity Reader Systems</a></li>
-												<li><a href="magnetic-lock-installation.html">Magnetic Lock (Maglock) Installation</a></li>
-												<li><a href="electric-strike-installation-repair.html">Electric Strike Installation & Repair</a></li>
-												<li><a href="biometric-lock-systems.html">Biometric Lock Systems</a></li>
-												<li><a href="buzzer-intercom-system-installation.html">Buzzer & Intercom System Installation</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Commercial Safe Services</a>
-											<ul>
-												<li><a href="commercial-safe-opening-lockout.html">Commercial Safe Opening & Lockout</a></li>
-												<li><a href="safe-installation-bolting.html">Safe Installation & Bolting</a></li>
-												<li><a href="safe-combination-changing-repair.html">Safe Combination Changing & Repair</a></li>
-											</ul>
-										</li>
-										<li><a href="file-cabinet-lock-replacement.html">File Cabinet Lock Replacement</a></li>
-									</ul>
-								</li>
-<!-- ...existing code... -->
-<li>
-    <a href="residential.html">Residential</a>
-    <ul>
-        <li><a href="safe-vault.html">Safe & Vault Services</a></li>
-        <li><a href="home-security-consultation.html">Home Security Consultation</a></li>
-        <li><a href="keyless-entry.html">Keyless Entry & Keypad Lock Installation</a></li>
-        <li><a href="smart-home-security.html">Advanced & Smart Home Security</a></li>
-        <li><a href="master-key-system.html">Master Key System</a></li>
-        <li><a href="key-system-services.html">Key & System Services</a></li>
-        <li><a href="mailbox-lock.html">Mailbox Lock Replacement</a></li>
-        <li><a href="window-lock.html">Window Lock Installation & Repair</a></li>
-        <li><a href="sliding-door-lock.html">Sliding Door & Patio Door Locks</a></li>
-        <li><a href="high-security-lock.html">High-Security Lock Installation</a></li>
-        <li><a href="deadbolt-installation.html">Deadbolt Installation</a></li>
-        <li><a href="lock-installation.html">Lock Installation</a></li>
-        <li><a href="rekeying.html">Rekeying Service</a></li>
-        <li><a href="lock-repair.html">Lock Repair / Replacement</a></li>
-        <li><a href="broken-key-extraction.html">Broken Key Extraction</a></li>
-        <li><a href="house-lockout.html">House Lockout Service</a></li>
-	</ul>
-	</li>
-	<li>
-		<a href="emergency.html">Emergency</a>
-		<ul>
-			<li><a href="emergency-house-lockout.html">Emergency House Lockout</a></li>
-			<li><a href="apartment-condo-lockout.html">Apartment & Condo Lockout</a></li>
-			<li><a href="emergency-lock-rekeying.html">Emergency Lock Rekeying</a></li>
-			<li><a href="burglary-breakin-damage-repair.html">Burglary & Break-in Damage Repair</a></li>
-			<li><a href="emergency-lock-repair-replacement.html">Emergency Lock Repair & Replacement</a></li>
-			<li><a href="car-lockout-service.html">Car Lockout Service</a></li>
-			<li><a href="trunk-lockout-service.html">Trunk Lockout Service</a></li>
-			<li><a href="emergency-car-key-replacement.html">Emergency Car Key Replacement (Lost Keys)</a></li>
-			<li><a href="broken-key-extraction-emergency.html">Broken Key Extraction (from Ignition or Door)</a></li>
-			<li><a href="emergency-ignition-repair.html">Emergency Ignition Repair</a></li>
-			<li><a href="business-office-lockout-emergency.html">Business & Office Lockout</a></li>
-			<li><a href="emergency-commercial-rekeying.html">Emergency Commercial Rekeying</a></li>
-			<li><a href="post-breakin-door-lock-repair.html">Post-Break-in Door & Lock Repair</a></li>
-			<li><a href="emergency-panic-bar-exit-device-repair.html">Emergency Panic Bar & Exit Device Repair</a></li>
-			<li><a href="safe-opening-lockout-service.html">Safe Opening & Lockout Service</a></li>
-		</ul>
-	</li>
-									<li>
-										<a href="service-areas.html">Service Areas</a>
-										<ul>
-											<li>
-												<a href="#">Oakland County</a>
-												<ul>
-													<li><a href="service-areas/southfield.html">Southfield</a></li>
-													<li><a href="service-areas/farmington-hills.html">Farmington Hills</a></li>
-													<li><a href="service-areas/novi.html">Novi</a></li>
-													<li><a href="service-areas/troy.html">Troy</a></li>
-													<li><a href="service-areas/royal-oak.html">Royal Oak</a></li>
-													<li><a href="service-areas/birmingham.html">Birmingham</a></li>
-													<li><a href="service-areas/bloomfield-hills.html">Bloomfield Hills</a></li>
-													<li><a href="service-areas/west-bloomfield.html">West Bloomfield</a></li>
-													<li><a href="service-areas/rochester-hills.html">Rochester Hills</a></li>
-													<li><a href="service-areas/pontiac.html">Pontiac</a></li>
-													<li><a href="service-areas/auburn-hills.html">Auburn Hills</a></li>
-													<li><a href="service-areas/clarkston.html">Clarkston</a></li>
-													<li><a href="service-areas/waterford.html">Waterford</a></li>
-												</ul>
-											</li>
-											<li>
-												<a href="#">Wayne County</a>
-												<ul>
-													<li><a href="service-areas/detroit.html">Detroit</a></li>
-													<li><a href="service-areas/dearborn.html">Dearborn</a></li>
-													<li><a href="service-areas/livonia.html">Livonia</a></li>
-													<li><a href="service-areas/canton.html">Canton</a></li>
-													<li><a href="service-areas/westland.html">Westland</a></li>
-													<li><a href="service-areas/taylor.html">Taylor</a></li>
-													<li><a href="service-areas/dearborn-heights.html">Dearborn Heights</a></li>
-													<li><a href="service-areas/allen-park.html">Allen Park</a></li>
-													<li><a href="service-areas/lincoln-park.html">Lincoln Park</a></li>
-													<li><a href="service-areas/wyandotte.html">Wyandotte</a></li>
-													<li><a href="service-areas/romulus-dtw-airport.html">Romulus (DTW Airport)</a></li>
-													<li><a href="service-areas/garden-city.html">Garden City</a></li>
-												</ul>
-											</li>
-											<li>
-												<a href="#">Macomb County</a>
-												<ul>
-													<li><a href="service-areas/warren.html">Warren</a></li>
-													<li><a href="service-areas/sterling-heights.html">Sterling Heights</a></li>
-													<li><a href="service-areas/clinton-township.html">Clinton Township</a></li>
-													<li><a href="service-areas/st-clair-shores.html">St. Clair Shores</a></li>
-													<li><a href="service-areas/shelby-township.html">Shelby Township</a></li>
-													<li><a href="service-areas/macomb-township.html">Macomb Township</a></li>
-													<li><a href="service-areas/roseville.html">Roseville</a></li>
-													<li><a href="service-areas/eastpointe.html">Eastpointe</a></li>
-													<li><a href="service-areas/mount-clemens.html">Mount Clemens</a></li>
-													<li><a href="service-areas/fraser.html">Fraser</a></li>
-													<li><a href="service-areas/chesterfield.html">Chesterfield</a></li>
-													<li><a href="service-areas/new-baltimore.html">New Baltimore</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="contact.html">Contact Us</a></li>
-							</ul>
-						</nav>
+          <a href="#services" class="button circled scrolly">Our Services</a>
+        </div>
+      </div>
 
-				</div>
+      <!-- Hero Banner -->
+      <section class="hero-banner">
+        <div class="container">
+          <div class="center-text">
+            <h2>Locked Out? Need a new key? We're Here to Help!</h2>
+            <p>
+              Available 24/7 for emergency lockouts across Metro Detroit,
+              Southfield, and surrounding areas.
+            </p>
+            <div class="hero-banner-actions">
+              <a href="tel:313-889-3266" class="button call-button">
+                📞 Call (313) 889-3266
+              </a>
+              <!-- TODO: Improve hover effects -->
+              <a href="#services" class="button scrolly scroll-button">
+                View Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<!-- Banner (Hero) -->
-				<section id="banner">
-					<header>
-						<h2>Southfield & Surrounding Areas <strong>24/7 Locksmith</strong> — Car, Residential & Commercial</h2>
-						<p>Locked out? Need a new key? We provide fast, reliable, and professional locksmith services across the Metro Detroit area — day or night.</p>
-						<p><a href="tel:313-889-3266" class="button">Call Now: (313) 889-3266</a></p>
-					</header>
-				</section>
+      <!-- Services Overview (Cards) -->
+      <section id="services" class="wrapper style1">
+        <div class="container">
+          <div class="services-header">
+            <h2>Our Locksmith Services</h2>
+            <p>
+              Professional locksmith solutions for every situation - automotive,
+              residential, commercial, emergency services, and more.
+            </p>
+          </div>
 
-			<!-- Services Overview (Carousel layout) -->
-				<section class="carousel">
-					<div class="reel">
+          <div class="row">
+            <div class="service-card">
+              <a href="automotive.html" class="image featured">
+                <img
+                  src="images/pic01.jpg"
+                  alt="Automotive Locksmith Services"
+                  loading="lazy"
+                />
+              </a>
+              <div>
+                <h3><a href="automotive.html">🚗 Automotive Locksmith</a></h3>
+              </div>
+              <p>
+                Car lockouts, key replacement, transponder programming, and
+                ignition repair. Fast roadside assistance for all vehicle makes
+                and models.
+              </p>
+              <ul>
+                <li><span>✓</span> Car lockout service</li>
+                <li><span>✓</span> Key cutting, replacements, & programming</li>
+                <li><span>✓</span> Ignition repair</li>
+                <li><span>✓</span> Quick roadside service</li>
+              </ul>
+            </div>
 
-						<article>
-							<a href="automotive.html" class="image featured"><img src="images/pic01.jpg" alt="Automotive Locksmith" loading="lazy" /></a>
-							<header>
-								<h3><a href="automotive.html">Automotive Locksmith</a></h3>
-							</header>
-							<p>Car lockouts, key replacements, transponder key programming, and ignition repair. Quick roadside service for all vehicle makes and models.</p>
-						</article>
+            <div class="service-card">
+              <a href="residential.html" class="image featured">
+                <img
+                  src="images/pic02.jpg"
+                  alt="Residential Locksmith Services"
+                  loading="lazy"
+                />
+              </a>
+              <div>
+                <h3><a href="residential.html">🏠 Residential Locksmith</a></h3>
+              </div>
+              <p>
+                Home lockouts, lock changes, rekeying, and high security and
+                smart lock system installations to keep your family and property
+                safe.
+              </p>
+              <ul>
+                <li><span>✓</span> House lockout service</li>
+                <li><span>✓</span> Lock changes, rekeying, & replacement</li>
+                <li><span>✓</span> High Security & Smart lock installation</li>
+              </ul>
+            </div>
 
-						<article>
-							<a href="residential.html" class="image featured"><img src="images/pic02.jpg" alt="Residential Locksmith" loading="lazy" /></a>
-							<header>
-								<h3><a href="residential.html">Residential Locksmith</a></h3>
-							</header>
-							<p>Home lockouts, lock changes, rekeying services, and high‑security lock installation to keep your family safe.</p>
-						</article>
+            <div class="service-card">
+              <a href="commercial.html" class="image featured">
+                <img
+                  src="images/pic03.jpg"
+                  alt="Commercial Locksmith Services"
+                  loading="lazy"
+                />
+              </a>
+              <div>
+                <h3><a href="commercial.html">🏢 Commercial Locksmith</a></h3>
+              </div>
+              <p>
+                Master key systems, access control, panic bar installations, and
+                high-security solutions for businesses of all sizes.
+              </p>
+              <ul>
+                <li><span>✓</span> Master key systems</li>
+                <li><span>✓</span> Access control installation</li>
+                <li><span>✓</span> Panic bar & exit device installation</li>
+                <li><span>✓</span> Commercial lockouts</li>
+                <li><span>✓</span> High-security lock installation</li>
+              </ul>
+            </div>
 
-						<article>
-							<a href="commercial.html" class="image featured"><img src="images/pic03.jpg" alt="Commercial Locksmith" loading="lazy" /></a>
-							<header>
-								<h3><a href="commercial.html">Commercial Locksmith</a></h3>
-							</header>
-							<p>Master key systems, access control, panic bar installation, and high‑security solutions for your business.</p>
-						</article>
+            <div class="service-card">
+              <a href="emergency.html" class="image featured">
+                <img
+                  src="images/pic04.jpg"
+                  alt="24/7 Emergency Locksmith"
+                  loading="lazy"
+                />
+              </a>
+              <div>
+                <h3><a href="emergency.html">🚨 24/7 Emergency Services</a></h3>
+              </div>
+              <p>
+                Round-the-clock emergency response for urgent lockouts and
+                security issues. Fast, reliable service when you need it most.
+                Automotive, residential, commercial, emergency services, and
+                more
+              </p>
+              <ul>
+                <li><span>✓</span> 24/7 availability</li>
+                <li><span>✓</span> Fast response times</li>
+                <li><span>✓</span> Emergency lockouts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-						<article>
-							<a href="emergency.html" class="image featured"><img src="images/pic04.jpg" alt="24/7 Emergency Locksmith" loading="lazy" /></a>
-							<header>
-								<h3><a href="emergency.html">24/7 Emergency Services</a></h3>
-							</header>
-							<p>Locked out of your car, home, or office? Rapid 24/7 emergency response to get you back in safely and quickly.</p>
-						</article>
+      <!-- Why Choose Us -->
+      <section id="why-choose-us" class="wrapper style2">
+        <div class="container">
+          <img
+            src="images/pic06.jpg"
+            alt="Professional Locksmith Team"
+            loading="lazy"
+          />
+          <div class="content">
+            <div class="content-header">
+              <h2>Why Choose CCR Locksmith?</h2>
+              <p>
+                Industry-leading <strong>5-Year Warranty</strong> on all
+                services and hardware
+              </p>
+            </div>
 
-					</div>
-				</section>
+            <div class="content-body">
+              <div class="content-item">
+                <i class="fas fa-bolt"></i>
+                <div>
+                  <h3>Lightning-Fast Response</h3>
+                  <p>
+                    <strong>Fast 24/7 response:</strong> Available day or night
+                    for any emergency.
+                  </p>
+                </div>
+              </div>
 
-			<!-- Why Choose Us -->
-				<div class="wrapper style2">
+              <div class="content-item">
+                <i class="fas fa-certificate"></i>
+                <div>
+                  <h3>Licensed & Insured Professionals</h3>
+                  <p>
+                    Fully licensed and insured technicians. Professionally
+                    trained with years of experience.
+                  </p>
+                </div>
+              </div>
 
-					<article id="main" class="container special">
-						<a href="#" class="image featured"><img src="images/pic06.jpg" alt="Why Choose Our Locksmith Services" loading="lazy" /></a>
-						<header>
-							<h2><a href="#">Why Choose Our Locksmith Services?</a></h2>
-							<p>We stand by our work. All services and hardware are backed by an industry‑leading <strong>5‑Year Warranty</strong>.</p>
-						</header>
-						<ul>
-							<li><strong>Fast 24/7 Response:</strong> Available day or night for any emergency. We get to you quickly, anywhere in our service area.</li>
-							<li><strong>Experienced & Licensed:</strong> Professionally trained, licensed, and insured technicians for your peace of mind.</li>
-							<li><strong>5‑Year Warranty:</strong> Coverage on service and hardware because quality matters.</li>
-							<li><strong>Upfront, Honest Pricing:</strong> Clear quotes with no hidden fees. Fair and transparent every time.</li>
-						</ul>
-						<footer>
-							<a href="tel:313-889-3266" class="button">Call (313) 889-3266</a>
-						</footer>
-					</article>
+              <div class="content-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <h3>5-Year Warranty</h3>
+                  <p>
+                    Unmatched warranty coverage on all parts and labor because
+                    quality matters.
+                  </p>
+                </div>
+              </div>
 
-				</div>
+              <div class="content-item">
+                <i class="fas fa-dollar-sign"></i>
+                <div>
+                  <h3>Transparent Pricing</h3>
+                  <p>
+                    Upfront quotes with no hidden fees. Fair, competitive rates
+                    every time.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-			<!-- Service Areas -->
-				<div class="wrapper style1">
+            <div class="content-contact">
+              <a href="tel:313-889-3266" class="button">
+                📞 Call (313) 889-3266 Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-					<section id="features" class="container special">
-						<header>
-							<h2>Proudly Serving Southfield and Surrounding Areas</h2>
-							<p>Our mobile locksmiths are ready to serve you throughout the Metro Detroit area.</p>
-						</header>
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<header>
-									<h3><a href="#">Oakland County</a></h3>
-								</header>
-								<ul>
-									<li><a href="service-areas/southfield.html">Southfield</a></li><li><a href="service-areas/farmington-hills.html">Farmington Hills</a></li><li><a href="service-areas/novi.html">Novi</a></li><li><a href="service-areas/troy.html">Troy</a></li>
-									<li><a href="service-areas/royal-oak.html">Royal Oak</a></li><li><a href="service-areas/birmingham.html">Birmingham</a></li><li><a href="service-areas/bloomfield-hills.html">Bloomfield Hills</a></li>
-									<li><a href="service-areas/west-bloomfield.html">West Bloomfield</a></li><li><a href="service-areas/rochester-hills.html">Rochester Hills</a></li><li><a href="service-areas/pontiac.html">Pontiac</a></li>
-									<li><a href="service-areas/auburn-hills.html">Auburn Hills</a></li><li><a href="service-areas/clarkston.html">Clarkston</a></li><li><a href="service-areas/waterford.html">Waterford</a></li><li>And More…</li>
-								</ul>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<header>
-									<h3><a href="#">Wayne County</a></h3>
-								</header>
-								<ul>
-									<li><a href="service-areas/detroit.html">Detroit</a></li><li><a href="service-areas/dearborn.html">Dearborn</a></li><li><a href="service-areas/livonia.html">Livonia</a></li><li><a href="service-areas/canton.html">Canton</a></li>
-									<li><a href="service-areas/westland.html">Westland</a></li><li><a href="service-areas/taylor.html">Taylor</a></li><li><a href="service-areas/dearborn-heights.html">Dearborn Heights</a></li>
-									<li><a href="service-areas/allen-park.html">Allen Park</a></li><li><a href="service-areas/lincoln-park.html">Lincoln Park</a></li><li><a href="service-areas/wyandotte.html">Wyandotte</a></li>
-									<li><a href="service-areas/romulus-dtw-airport.html">Romulus (DTW Airport)</a></li><li><a href="service-areas/garden-city.html">Garden City</a></li><li>And More…</li>
-								</ul>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<header>
-									<h3><a href="#">Macomb County</a></h3>
-								</header>
-								<ul>
-									<li><a href="service-areas/warren.html">Warren</a></li><li><a href="service-areas/sterling-heights.html">Sterling Heights</a></li><li><a href="service-areas/clinton-township.html">Clinton Township</a></li>
-									<li><a href="service-areas/st-clair-shores.html">St. Clair Shores</a></li><li><a href="service-areas/shelby-township.html">Shelby Township</a></li><li><a href="service-areas/macomb-township.html">Macomb Township</a></li>
-									<li><a href="service-areas/roseville.html">Roseville</a></li><li><a href="service-areas/eastpointe.html">Eastpointe</a></li><li><a href="service-areas/mount-clemens.html">Mount Clemens</a></li>
-									<li><a href="service-areas/fraser.html">Fraser</a></li><li><a href="service-areas/chesterfield.html">Chesterfield</a></li><li><a href="service-areas/new-baltimore.html">New Baltimore</a></li><li>And More…</li>
-								</ul>
-							</article>
-						</div>
-					</section>
+      <!-- Service Areas -->
+      <section id="service-locations" class="wrapper style1">
+        <div class="container">
+          <div class="service-locations-header">
+            <h2>Serving Metro Detroit</h2>
+            <p class="service-locations-description">
+              Fast, reliable locksmith services across Metro Detroit in Oakland,
+              Wayne, and Macomb counties
+            </p>
+          </div>
 
-				</div>
+          <div class="row">
+            <article class="col-4 col-12-mobile special">
+              <div>
+                <h3>Oakland County</h3>
+              </div>
+              <ul>
+                <li><a href="service-areas/southfield.html">Southfield</a></li>
+                <li>
+                  <a href="service-areas/farmington-hills.html"
+                    >Farmington Hills</a
+                  >
+                </li>
+                <li><a href="service-areas/novi.html">Novi</a></li>
+                <li><a href="service-areas/troy.html">Troy</a></li>
+                <li><a href="service-areas/royal-oak.html">Royal Oak</a></li>
+                <li><a href="service-areas/birmingham.html">Birmingham</a></li>
+                <li>
+                  <a href="service-areas/bloomfield-hills.html"
+                    >Bloomfield Hills</a
+                  >
+                </li>
+                <li>
+                  <a href="service-areas/west-bloomfield.html"
+                    >West Bloomfield</a
+                  >
+                </li>
+                <li>
+                  <a href="service-areas/rochester-hills.html"
+                    >Rochester Hills</a
+                  >
+                </li>
+                <li><a href="service-areas/pontiac.html">Pontiac</a></li>
+                <li>
+                  <a href="service-areas/auburn-hills.html">Auburn Hills</a>
+                </li>
+                <li><a href="service-areas/clarkston.html">Clarkston</a></li>
+                <li><a href="service-areas/waterford.html">Waterford</a></li>
+                <li>And More…</li>
+              </ul>
+            </article>
+            <article class="col-4 col-12-mobile special">
+              <div>
+                <h3>Wayne County</h3>
+              </div>
+              <ul>
+                <li><a href="service-areas/detroit.html">Detroit</a></li>
+                <li><a href="service-areas/dearborn.html">Dearborn</a></li>
+                <li><a href="service-areas/livonia.html">Livonia</a></li>
+                <li><a href="service-areas/canton.html">Canton</a></li>
+                <li><a href="service-areas/westland.html">Westland</a></li>
+                <li><a href="service-areas/taylor.html">Taylor</a></li>
+                <li>
+                  <a href="service-areas/dearborn-heights.html"
+                    >Dearborn Heights</a
+                  >
+                </li>
+                <li><a href="service-areas/allen-park.html">Allen Park</a></li>
+                <li>
+                  <a href="service-areas/lincoln-park.html">Lincoln Park</a>
+                </li>
+                <li><a href="service-areas/wyandotte.html">Wyandotte</a></li>
+                <li>
+                  <a href="service-areas/romulus-dtw-airport.html"
+                    >Romulus (DTW Airport)</a
+                  >
+                </li>
+                <li>
+                  <a href="service-areas/garden-city.html">Garden City</a>
+                </li>
+                <li>And More…</li>
+              </ul>
+            </article>
+            <article class="col-4 col-12-mobile special">
+              <div>
+                <h3>Macomb County</h3>
+              </div>
+              <ul>
+                <li><a href="service-areas/warren.html">Warren</a></li>
+                <li>
+                  <a href="service-areas/sterling-heights.html"
+                    >Sterling Heights</a
+                  >
+                </li>
+                <li>
+                  <a href="service-areas/clinton-township.html"
+                    >Clinton Township</a
+                  >
+                </li>
+                <li>
+                  <a href="service-areas/st-clair-shores.html"
+                    >St. Clair Shores</a
+                  >
+                </li>
+                <li>
+                  <a href="service-areas/shelby-township.html"
+                    >Shelby Township</a
+                  >
+                </li>
+                <li>
+                  <a href="service-areas/macomb-township.html"
+                    >Macomb Township</a
+                  >
+                </li>
+                <li><a href="service-areas/roseville.html">Roseville</a></li>
+                <li><a href="service-areas/eastpointe.html">Eastpointe</a></li>
+                <li>
+                  <a href="service-areas/mount-clemens.html">Mount Clemens</a>
+                </li>
+                <li><a href="service-areas/fraser.html">Fraser</a></li>
+                <li>
+                  <a href="service-areas/chesterfield.html">Chesterfield</a>
+                </li>
+                <li>
+                  <a href="service-areas/new-baltimore.html">New Baltimore</a>
+                </li>
+                <li>And More…</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
 
-			<!-- Footer -->
-				<div id="footer">
-					<div class="container">
-						<div class="row">
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <!-- About -->
+            <section class="col-4 col-12-mobile">
+              <div class="icon-container">
+                <h2 class="icon solid fa-info circled">
+                  <span class="label">About</span>
+                </h2>
+              </div>
+              <ul class="divided">
+                <li>
+                  <div class="post stub">
+                    <h3>About Our Company</h3>
+                    <p>
+                      Since 2015, Car Commercial Residential Emergency Locksmith
+                      Service, LLC has delivered fast, professional locksmith
+                      services across Southfield and Metro Detroit. Fully
+                      mobile, licensed, and insured, we handle car key
+                      replacement and programming, home rekeys and lock changes,
+                      commercial master key systems and access control, and 24/7
+                      emergency lockouts. Expect honest, upfront pricing, clean
+                      workmanship, and a clear ETA. Every job is backed by our
+                      industry-leading 5-Year Warranty on parts and labor.
+                      Serving Oakland, Wayne, and Macomb counties within ~35
+                      miles of Southfield. Need help now? Call (313) 889-3266.
+                      We install smart locks and high-security cylinders, repair
+                      ignitions, provide local dispatch with transparent quotes
+                      and no hidden fees.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </section>
 
-							<!-- About -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-info circled"><span class="label">About</span></h2>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="post stub">
-												<header>
-													<h3>About Our Company</h3>
-												</header>
-												<p>Since 2015, Car Commercial Residential Emergency Locksmith Service, LLC has delivered fast, professional locksmith services across Southfield and Metro Detroit. Fully mobile, licensed, and insured, we handle car key replacement and programming, home rekeys and lock changes, commercial master key systems and access control, and 24/7 emergency lockouts. Expect honest, upfront pricing, clean workmanship, and a clear ETA. Every job is backed by our industry-leading 5-Year Warranty on parts and labor. Serving Oakland, Wayne, and Macomb counties within ~35 miles of Southfield. Need help now? Call (313) 889-3266. We install smart locks and high-security cylinders, repair ignitions, provide local dispatch with transparent quotes and no hidden fees.</p>
-											</article>
-										</li>
-									</ul>
-								</section>
+            <!-- Quick Links -->
+            <section class="col-4 col-12-mobile">
+              <div class="icon-container">
+                <h2 class="icon solid fa-link circled">
+                  <span class="label">Quick Links</span>
+                </h2>
+              </div>
+              <ul class="divided">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="service-areas.html">Service Areas</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="automotive.html">Automotive Locksmith</a></li>
+                <li><a href="residential.html">Residential Locksmith</a></li>
+                <li><a href="commercial.html">Commercial Locksmith</a></li>
+                <li><a href="emergency.html">24/7 Emergency Service</a></li>
+              </ul>
+            </section>
 
-							<!-- Quick Links -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-link circled"><span class="label">Quick Links</span></h2>
-									</header>
-									<ul class="divided">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="service-areas.html">Service Areas</a></li>
-										<li><a href="contact.html">Contact Us</a></li>
-										<li><a href="automotive.html">Automotive Locksmith</a></li>
-										<li><a href="residential.html">Residential Locksmith</a></li>
-										<li><a href="commercial.html">Commercial Locksmith</a></li>
-										<li><a href="emergency.html">24/7 Emergency Service</a></li>
-									</ul>
-								</section>
+            <!-- Contact / Map -->
+            <section class="col-4 col-12-mobile">
+              <div class="icon-container">
+                <h2 class="icon solid fa-map-marker-alt circled">
+                  <span class="label">Contact</span>
+                </h2>
+              </div>
+              <p>
+                <strong>Address:</strong> Southfield, MI 48076<br />
+                <strong>Phone:</strong>
+                <a href="tel:313-889-3266">(313) 889-3266</a><br />
+                <strong>Email:</strong>
+                <a href="mailto:carcommercialresidentiallocks@gmail.com"
+                  >carcommercialresidentiallocks@gmail.com</a
+                >
+              </p>
+              <div style="margin-top: 18px">
+                <strong>Business Hours:</strong>
+                <table>
+                  <tr>
+                    <td>Sunday</td>
+                    <td>6:30 AM – 11:30 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Monday</td>
+                    <td>6:30 AM – 11:30 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>6:30 AM – 11:30 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>6:30 AM – 11:30 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Thursday</td>
+                    <td>6:30 AM – 11:30 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Friday</td>
+                    <td>6:30 AM – 1:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Saturday</td>
+                    <td style="color: #888">Closed</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="row gtr-25">
+                <div class="col-12">
+                  <div class="image fit">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187927.0291188644!2d-83.56636769999999!3d42.476434999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824b1b77457a4d7%3A0x15f7f3a8a3a4a254!2sSouthfield%2C%20MI!5e0!3m2!1sen!2sus!4v1723146950000!5m2!1sen!2sus"
+                      title="Map showing our service location in Southfield"
+                      style="border: 0; width: 100%; height: 260px"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-12">
+              <!-- Contact CTA -->
+              <section class="contact">
+                <h3>Need help now? We’re available 24/7.</h3>
 
-							<!-- Contact / Map -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-map-marker-alt circled"><span class="label">Contact</span></h2>
-									</header>
-									<p>
-										<strong>Address:</strong> Edwards Ave, Southfield, MI 48076<br>
-										<strong>Phone:</strong> <a href="tel:313-889-3266">(313) 889-3266</a><br>
-										<strong>Email:</strong> <a href="mailto:carcommercialresidentiallocks@gmail.com">carcommercialresidentiallocks@gmail.com</a>
-									</p>
-									<div style="margin-top: 18px;">
-										<strong>Business Hours:</strong>
-										<table style="width:100%; font-size: 0.98em; border-collapse: collapse; margin-top: 8px;">
-											<tr><td>Sunday</td><td>6:30 AM – 11:30 PM</td></tr>
-											<tr><td>Monday</td><td>6:30 AM – 11:30 PM</td></tr>
-											<tr><td>Tuesday</td><td>6:30 AM – 11:30 PM</td></tr>
-											<tr><td>Wednesday</td><td>6:30 AM – 11:30 PM</td></tr>
-											<tr><td>Thursday</td><td>6:30 AM – 11:30 PM</td></tr>
-											<tr><td>Friday</td><td>6:30 AM – 1:00 PM</td></tr>
-											<tr><td>Saturday</td><td style="color: #888;">Closed</td></tr>
-										</table>
-									</div>
-									<div class="row gtr-25">
-										<div class="col-12">
-											<div class="image fit">
-												<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187927.0291188644!2d-83.56636769999999!3d42.476434999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824b1b77457a4d7%3A0x15f7f3a8a3a4a254!2sSouthfield%2C%20MI!5e0!3m2!1sen!2sus!4v1723146950000!5m2!1sen!2sus" title="Map showing our service location in Southfield" style="border:0; width:100%; height:260px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-											</div>
-										</div>
-									</div>
-								</section>
+                <a href="tel:313-889-3266" class="button"
+                  >Call (313) 889-3266</a
+                >
 
-						</div>
-						<hr />
-						<div class="row">
-							<div class="col-12">
+                <!-- TODO: Improve styling of icons -->
+                <ul class="icons social-icons">
+                  <li>
+                    <a href="#" class="icon brands fa-facebook-f"
+                      ><span class="label">Facebook</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="icon brands fa-instagram"
+                      ><span class="label">Instagram</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="icon brands fa-linkedin-in"
+                      ><span class="label">LinkedIn</span></a
+                    >
+                  </li>
+                </ul>
+              </section>
 
-								<!-- Contact CTA -->
-									<section class="contact">
-										<header>
-											<h3>Need help now? We’re available 24/7.</h3>
-										</header>
-										<p><a href="tel:313-889-3266" class="button">Call (313) 889-3266</a></p>
-										<ul class="icons">
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										</ul>
-									</section>
+              <!-- Copyright -->
+              <div class="copyright">
+                <p>
+                  &copy; 2015-2025 Car Commercial Residential Emergency
+                  Locksmith Service, LLC.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
 
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>&copy; 2015-2025 Car Commercial Residential Emergency Locksmith Service, LLC.</li>
-										</ul>
-									</div>
-
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-
-		</div>
-
-		<!-- Scripts -->
-<script src="assets/js/jquery.min.js" defer></script>
-<script src="assets/js/jquery.dropotron.min.js" defer></script>
-<script src="assets/js/jquery.scrolly.min.js" defer></script>
-<script src="assets/js/jquery.scrollex.min.js" defer></script>
-<script src="assets/js/browser.min.js" defer></script>
-<script src="assets/js/breakpoints.min.js" defer></script>
-<script src="assets/js/util.js" defer></script>
-<script src="assets/js/main.js" defer></script>	</body>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/jquery.dropotron.min.js" defer></script>
+    <script src="assets/js/jquery.scrolly.min.js" defer></script>
+    <script src="assets/js/jquery.scrollex.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
 </html>
