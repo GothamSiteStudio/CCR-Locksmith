@@ -2352,22 +2352,42 @@ input, select, textarea {
 				}
 
 	.dropotron {
-		background: rgba(255, 255, 255, 0.975);
-		padding: 1em 1.25em 1em 1.25em;
+		background: rgba(48, 25, 58, 0.95);
+		padding: 0.5em;
 		line-height: 1em;
-		height: auto;
 		text-align: left;
 		border-radius: 0.5em;
-		box-shadow: 0 0.15em 0.25em 0 rgba(0, 0, 0, 0.25);
+		box-shadow: 0 0.15em 0.25em 0 rgba(0, 0, 0, 0.35);
 		min-width: 12em;
 		margin-top: -1em;
 		list-style: none;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		max-height: 80vh;
+		overflow-y: auto;
+		position: fixed;
+		scrollbar-width: thin;
+		scrollbar-color: rgba(255, 255, 255, 0.3) rgba(48, 25, 58, 0.95);
+	}
+	
+	.dropotron::-webkit-scrollbar {
+		width: 8px;
+	}
+	
+	.dropotron::-webkit-scrollbar-track {
+		background: rgba(48, 25, 58, 0.95);
+	}
+	
+	.dropotron::-webkit-scrollbar-thumb {
+		background-color: rgba(255, 255, 255, 0.3);
+		border-radius: 4px;
 	}
 
 		.dropotron li {
-			border-top: solid 1px rgba(128, 128, 128, 0.2);
-			color: #5b5b5b;
-			padding-left: 0;
+			border-top: solid 1px rgba(255, 255, 255, 0.1);
+			color: #ffffff;
+			padding: 0.7em 1em;
+			white-space: nowrap;
+			transition: background-color 0.2s ease;
 		}
 
 			.dropotron li:first-child {
@@ -2376,6 +2396,7 @@ input, select, textarea {
 
 			.dropotron li:hover {
 				color: #ef8376;
+				background: rgba(255, 255, 255, 0.1);
 			}
 
 			.dropotron li a, .dropotron li span {
