@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -310,8 +311,7 @@
 
                         <section>
                             <h2>Send Us a Message</h2>
-                            <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="/thank-you.html">
-                                <input type="hidden" name="form-name" value="contact" />
+                            <form id="contactForm">
                                 <div class="row gtr-50">
                                     <div class="col-6 col-12-mobilep">
                                         <input type="text" name="name" id="name" placeholder="Name" required />
@@ -336,15 +336,75 @@
                                         <textarea name="message" id="message" placeholder="Message" rows="6" required></textarea>
                                     </div>
                                     <div class="col-12">
-                                        <div data-netlify-recaptcha="true"></div>
-                                    </div>
-                                    <div class="col-12">
                                         <ul class="actions">
-                                            <li><input type="submit" class="button" value="Submit" /></li>
+                                            <li><input type="submit" class="button" value="Submit" id="submitBtn" /></li>
                                         </ul>
                                     </div>
                                 </div>
                             </form>
+                            
+                            <div id="formMessage" style="display: none; padding: 15px; border-radius: 5px; margin-top: 20px;">
+                            </div>
+                            
+                            <div style="background: #f8f9fa; padding: 20px; border-radius: 5px; margin-top: 20px;">
+                                <h3>📧 Alternative Contact Methods</h3>
+                                <p><strong>Prefer to email directly?</strong></p>
+                                <p>Send your message to: <a href="mailto:carcommercialresidentiallocks@gmail.com">carcommercialresidentiallocks@gmail.com</a></p>
+                                <p><strong>Need immediate help?</strong></p>
+                                <p>Call us now: <a href="tel:3138893266" style="font-size: 1.2em; color: #ff6b35;">(313) 889-3266</a></p>
+                            </div>
+
+                            <script>
+                                // Initialize EmailJS
+                                emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this
+                                
+                                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                                    event.preventDefault();
+                                    
+                                    const submitBtn = document.getElementById('submitBtn');
+                                    const messageDiv = document.getElementById('formMessage');
+                                    
+                                    // Disable submit button
+                                    submitBtn.value = 'Sending...';
+                                    submitBtn.disabled = true;
+                                    
+                                    // Get form data
+                                    const formData = {
+                                        name: document.getElementById('name').value,
+                                        email: document.getElementById('email').value,
+                                        phone: document.getElementById('phone').value,
+                                        service: document.getElementById('service').value,
+                                        message: document.getElementById('message').value
+                                    };
+                                    
+                                    // Since EmailJS requires setup, let's use a simpler approach for now
+                                    // Create mailto link with all the information
+                                    const subject = encodeURIComponent(`New Contact Form Submission - ${formData.service || 'General Inquiry'}`);
+                                    const body = encodeURIComponent(
+                                        `Name: ${formData.name}\n` +
+                                        `Email: ${formData.email}\n` +
+                                        `Phone: ${formData.phone}\n` +
+                                        `Service Needed: ${formData.service}\n\n` +
+                                        `Message:\n${formData.message}`
+                                    );
+                                    
+                                    // Open email client
+                                    window.open(`mailto:carcommercialresidentiallocks@gmail.com?subject=${subject}&body=${body}`);
+                                    
+                                    // Show success message
+                                    messageDiv.style.display = 'block';
+                                    messageDiv.style.background = '#4CAF50';
+                                    messageDiv.style.color = 'white';
+                                    messageDiv.innerHTML = '<h3>✓ Message Prepared!</h3><p>Your email client should open with the pre-filled message. Please send it from there.</p>';
+                                    
+                                    // Reset form
+                                    document.getElementById('contactForm').reset();
+                                    
+                                    // Re-enable submit button
+                                    submitBtn.value = 'Submit';
+                                    submitBtn.disabled = false;
+                                });
+                            </script>
                         </section>
 
                         <section>
