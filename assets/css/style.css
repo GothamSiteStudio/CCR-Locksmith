@@ -522,3 +522,55 @@ body.homepage #header {
   font-size: 0.9rem;
   margin-bottom: 0;
 }
+
+/* Page Background Color Customization */
+/* Set main content background to yellow, excluding header and footer */
+#page-wrapper {
+  background-color: #ffde59;
+}
+
+/* Override wrapper background to inherit the yellow color */
+.wrapper {
+  background-color: #ffde59 !important;
+}
+
+/* Also update hero banner to use yellow background */
+.hero-banner {
+  background-color: #ffde59 !important;
+}
+
+/* Update footer to use the same gradient as header */
+#footer {
+  background: var(--gradient) !important;
+  color: var(--white);
+}
+
+/* Update trust-bar to use the same gradient as header */
+.trust-bar {
+  background: var(--gradient) !important;
+  color: var(--white);
+}
+
+.trust-item {
+  color: var(--white) !important;
+}
+
+.trust-item i {
+  color: var(--white) !important;
+}
+
+/* Keep header with original styling */
+#header {
+  background-color: transparent;
+}
+
+/* Contact page text styling - make most text white while preserving specific dark text */
+.wrapper p, .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6, 
+.wrapper td, .wrapper th, .wrapper label {
+  color: white !important;
+}
+
+/* Preserve the Saturday "Closed" text color which is gray */
+.wrapper td[style*="color: #888"] {
+  color: #888 !important;
+}
