@@ -295,13 +295,13 @@ body.homepage #header {
 }
 
 .service-card h3 {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   margin-bottom: 0.5rem;
   font-size: 1.4rem;
 }
 
 .service-card p {
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 
 .service-card ul {
@@ -311,11 +311,29 @@ body.homepage #header {
 }
 
 .service-card li {
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 
 .service-card li span {
-  color: var(--success-color);
+  color: var(--success-color) !important;
+}
+
+/* Additional specificity for service card text visibility */
+#services .service-card p {
+  color: var(--secondary-color) !important;
+}
+
+#services .service-card li {
+  color: var(--secondary-color) !important;
+}
+
+#services .service-card h3 {
+  color: var(--primary-color) !important;
+}
+
+#services .service-card h3 a {
+  color: var(--primary-color) !important;
+  text-decoration: none;
 }
 
 /* Why Choose Us Styles */
