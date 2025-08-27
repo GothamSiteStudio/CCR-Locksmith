@@ -1,0 +1,7 @@
+# Redirects and rewrites
+
+# Redirect form submissions back to contact page with success message
+/contact-success /contact.html 200
+
+# Handle any trailing slashes
+/* /index.html 200
