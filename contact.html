@@ -18,6 +18,34 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Custom styles for contact page - change white/light text to #224579 and make colored text bold */
+        .wrapper.style1 .container #content {
+            color: #224579 !important;
+        }
+        
+        .wrapper.style1 .container #content p,
+        .wrapper.style1 .container #content h1,
+        .wrapper.style1 .container #content h2,
+        .wrapper.style1 .container #content h3,
+        .wrapper.style1 .container #content td,
+        .wrapper.style1 .container #content header p {
+            color: #224579 !important;
+        }
+        
+        /* Make colored text (links, phone numbers, etc.) bold while keeping their original colors */
+        .wrapper.style1 .container #content a[href^="tel:"],
+        .wrapper.style1 .container #content a[href^="mailto:"],
+        .wrapper.style1 .container #content a[style*="color"],
+        .wrapper.style1 .container #content strong {
+            font-weight: bold !important;
+        }
+        
+        /* Specifically target the orange phone number and make it bold */
+        .wrapper.style1 .container #content a[style*="#ff6b35"] {
+            font-weight: bold !important;
+        }
+    </style>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="application/ld+json">
     {
