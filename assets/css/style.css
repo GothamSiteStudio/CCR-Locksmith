@@ -499,6 +499,43 @@ body.homepage #header {
   padding: 1rem;
 }
 
+/* ---- Navigation dropdown improvements (override main.css) ---- */
+/* Remove inner scrollbars and fixed positioning that clips menus */
+.dropotron {
+  position: absolute !important; /* allow natural page scroll */
+  max-height: none !important;   /* no inner scrollbar */
+  overflow: visible !important;  /* show full submenu */
+  min-width: 16em;               /* a bit wider for readability */
+  z-index: 10000;                /* ensure it sits above hero */
+}
+
+/* Make the top-level Service Areas dropdown a clear mega panel */
+/* Service Areas is the 7th top-level <li> in #nav */
+#nav > ul > li:nth-child(7) .dropotron.level-0 {
+  min-width: 56rem;              /* wide panel */
+  padding: 1rem 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(16rem, 1fr));
+  gap: 1rem 2rem;
+}
+
+/* Space items nicely inside mega panel */
+#nav > ul > li:nth-child(7) .dropotron.level-0 > li {
+  white-space: normal;           /* allow wrapping for long names */
+  padding: 0.35rem 0.25rem;
+}
+
+/* Make nested submenus (counties) open larger and clearer */
+.dropotron .dropotron {
+  min-width: 20rem;              /* wider county/city list */
+}
+
+/* Optional: Slightly increase font for readability in mega */
+#nav > ul > li:nth-child(7) .dropotron.level-0,
+#nav > ul > li:nth-child(7) .dropotron.level-0 a {
+  font-size: 0.95rem;
+}
+
 #footer a {
   font-weight: bold;
   border-bottom: 0;
