@@ -127,6 +127,7 @@ body.homepage #header {
   background-attachment: fixed;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   position: relative;
 }
