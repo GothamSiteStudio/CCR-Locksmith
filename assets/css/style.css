@@ -1,4 +1,4 @@
-/* Base Styles & Variables */
+﻿/* Base Styles & Variables */
 :root {
   --primary-color: #1a365d;
   --secondary-color: #2d5aa0;
@@ -500,13 +500,36 @@ body.homepage #header {
 }
 
 /* ---- Navigation dropdown improvements (override main.css) ---- */
-/* Remove inner scrollbars and fixed positioning that clips menus */
+/* Keep dropdowns inside viewport and make long lists compact */
 .dropotron {
-  position: absolute !important; /* allow natural page scroll */
-  max-height: none !important;   /* no inner scrollbar */
-  overflow: visible !important;  /* show full submenu */
-  min-width: 16em;               /* a bit wider for readability */
-  z-index: 10000;                /* ensure it sits above hero */
+  /* Use fixed positioning so the panel isn’t clipped by parents */
+  position: fixed !important;
+  /* Limit height relative to viewport; enable inner scrolling */
+  max-height: calc(100vh - 180px) !important; /* room for header */
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  /* Slightly wider for readability and guaranteed stacking */
+  min-width: 16em;
+  z-index: 10000;
+}
+
+/* Compact spacing so more items fit without feeling cramped */
+.dropotron li {
+  padding: 0.45rem 0.8rem !important;
+}
+.dropotron li a,
+.dropotron li span {
+  padding: 0.25rem 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* On desktop, split long top-level lists into two columns */
+@media (min-width: 992px) {
+  .dropotron.level-0 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(14rem, 1fr));
+    gap: 0.25rem 1.5rem;
+  }
 }
 
 /* Make the top-level Service Areas dropdown a clear mega panel */
@@ -516,13 +539,13 @@ body.homepage #header {
   padding: 1rem 1.25rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(16rem, 1fr));
-  gap: 1rem 2rem;
+  gap: 0.5rem 2rem;
 }
 
 /* Space items nicely inside mega panel */
 #nav > ul > li:nth-child(7) .dropotron.level-0 > li {
   white-space: normal;           /* allow wrapping for long names */
-  padding: 0.35rem 0.25rem;
+  padding: 0.25rem 0.25rem;
 }
 
 /* Make nested submenus (counties) open larger and clearer */
@@ -647,3 +670,4 @@ body.homepage #header {
 .wrapper td[style*="color: #888"] {
   color: #888 !important;
 }
+

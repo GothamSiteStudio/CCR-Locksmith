@@ -38,9 +38,17 @@
 	// Dropdowns.
 		$('#nav > ul').dropotron({
 			mode: 'fade',
-			speed: 350,
+			speed: 300,
 			noOpenerFade: true,
-			alignment: 'center'
+			alignment: 'center',
+			// Make hover less sensitive and keep menus open longer
+			expandMode: 'hover',
+			hoverDelay: 200,
+			hideDelay: 700,
+			// Slight offset to reduce accidental gaps
+			offsetY: 2,
+			// Keep detaching to body for positioning stability
+			detach: true
 		});
 
 	// Scrolly.
