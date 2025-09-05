@@ -35,22 +35,6 @@
 			}, 100);
 		});
 
-	// Dropdowns.
-		$('#nav > ul').dropotron({
-			mode: 'fade',
-			speed: 300,
-			noOpenerFade: true,
-			alignment: 'center',
-			// Make hover less sensitive and keep menus open longer
-			expandMode: 'hover',
-			hoverDelay: 200,
-			hideDelay: 700,
-			// Slight offset to reduce accidental gaps
-			offsetY: 2,
-			// Keep detaching to body for positioning stability
-			detach: true
-		});
-
 	// Scrolly.
 		$('.scrolly').scrolly();
 
@@ -218,8 +202,45 @@
 						$t._update();
 					}).trigger('resize');
 
-				});
+		});
 
 		});
+
+	// Desktop dropdown hover management with delay + cancel.
+	// Prevents flicker when moving between top-level items.
+	(function() {
+		var $nav = $('#nav');
+		if ($nav.length === 0) return;
+
+		var hideTimer = null;
+
+		function openItem($li) {
+			clearTimeout(hideTimer);
+			// Close any other open items first
+			$nav.find('.dropdown.open, .mega-dropdown.open').not($li).removeClass('open');
+			$li.addClass('open');
+		}
+
+		function scheduleClose($li, delay) {
+			clearTimeout(hideTimer);
+			hideTimer = setTimeout(function() {
+				$li.removeClass('open');
+			}, delay || 200);
+		}
+
+		// Use event delegation for both simple dropdowns and mega menus
+		$nav.on('mouseenter', '.dropdown, .mega-dropdown', function() {
+			openItem($(this));
+		});
+
+		$nav.on('mouseleave', '.dropdown, .mega-dropdown', function() {
+			scheduleClose($(this), 200);
+		});
+
+		// If user enters a new item quickly, cancel pending close
+		$nav.on('mouseenter', '.dropdown > .dropdown-menu, .mega-dropdown > .mega-menu', function() {
+			clearTimeout(hideTimer);
+		});
+	})();
 
 })(jQuery);
