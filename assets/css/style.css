@@ -752,10 +752,41 @@ body.homepage #header {
   pointer-events: auto;
 }
 
+/* Service areas menu specific transform on larger screens */
+@media (min-width: 992px) {
+  .mega-dropdown:hover .service-areas-menu,
+  .mega-dropdown.open > .service-areas-menu {
+    transform: none;
+  }
+}
+
 /* Service Areas Mega Menu - 3 columns */
 .service-areas-menu {
   grid-template-columns: repeat(3, 1fr);
-  min-width: 800px;
+  min-width: 720px;
+  max-width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 9px;
+}
+
+/* Prevent service areas menu from overflowing on the right */
+@media (min-width: 992px) {
+  .service-areas-menu {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+}
+
+/* Adjust arrow positioning for right-aligned service areas menu on larger screens */
+@media (min-width: 992px) {
+  .service-areas-menu::before,
+  .service-areas-menu::after {
+    left: auto;
+    right: 2rem;
+    transform: none;
+  }
 }
 
 /* Mega Menu Sections */
@@ -1044,5 +1075,47 @@ body.homepage #header {
 /* Preserve the Saturday "Closed" text color which is gray */
 .wrapper td[style*="color: #888"] {
   color: #888 !important;
+}
+
+/* Prevent horizontal overflow from mega menus */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+#page-wrapper {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Ensure mega menus don't extend beyond viewport on smaller screens */
+@media (max-width: 1200px) {
+  .service-areas-menu {
+    min-width: 600px;
+    max-width: 85vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .service-areas-menu {
+    min-width: 400px;
+    max-width: 90vw;
+  }
+}
+
+/* Fix hover area for Service Areas dropdown to prevent gaps */
+.mega-dropdown:last-child {
+  position: relative;
+}
+
+.mega-dropdown:last-child::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+  z-index: 99;
 }
 
