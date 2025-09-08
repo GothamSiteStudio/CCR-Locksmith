@@ -263,7 +263,7 @@ body.homepage #header {
 /* Service Cards */
 #services {
   padding: 1.5rem 3rem;
-  background: var(--bg-light);
+  background: var(--primary-color);
   margin-bottom: 0;
 }
 
@@ -273,15 +273,15 @@ body.homepage #header {
 }
 
 .services-header h2 {
-  color: var(--primary-color);
+  color: var(--white);
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .services-header p {
   font-size: 1.2rem;
-  color: var(--text-light);
-  max-width: 600px;
+  color: #e7eefb;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -365,8 +365,10 @@ body.homepage #header {
 }
 
 #why-choose-us .container {
-  display: flex;
-  justify-content: space-between;
+  /* Stack content for consistent alignment */
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 #why-choose-us img {
@@ -437,6 +439,22 @@ body.homepage #header {
   color: var(--primary-color);
 }
 
+/* Align and style bullets in Why Choose Us */
+#why-choose-us ul.feature-list {
+  list-style: disc;
+  color: var(--white);
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+#why-choose-us ul.feature-list li {
+  margin: 0.4rem 0;
+}
+
+#why-choose-us ul.feature-list li strong {
+  color: var(--white);
+}
+
 /* Service Locations */
 #service-locations {
   background: var(--bg-light);
@@ -460,6 +478,21 @@ body.homepage #header {
 #service-locations .service-locations-description {
   font-size: 1.2rem;
   text-align: center;
+}
+
+/* Service Area section on Automotive page */
+#service-area {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 1.5rem 0;
+}
+
+#service-area h2 {
+  color: var(--white);
+}
+
+#service-area p {
+  color: var(--white);
 }
 
 #service-locations h2 {
