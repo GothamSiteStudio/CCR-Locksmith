@@ -1099,16 +1099,17 @@ body.homepage #header {
   background-color: transparent;
 }
 
-/* Contact page text styling - make most text white while preserving specific dark text */
-.wrapper p, .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6, 
-.wrapper td, .wrapper th, .wrapper label {
-  color: white !important;
+/* Content text colors on yellow background (match screenshot)
+   - Headings: primary deep blue
+   - Body text: dark slate
+*/
+.wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5, .wrapper h6 {
+  color: var(--primary-color) !important;
 }
-
-/* Preserve the Saturday "Closed" text color which is gray */
-.wrapper td[style*="color: #888"] {
-  color: #888 !important;
+.wrapper p, .wrapper li, .wrapper td, .wrapper th, .wrapper label, .wrapper a {
+  color: var(--text-dark) !important;
 }
+.wrapper a:hover { color: var(--secondary-color) !important; }
 
 /* Prevent horizontal overflow from mega menus */
 html, body {
@@ -1151,4 +1152,57 @@ html, body {
   background: transparent;
   z-index: 99;
 }
+
+/* FAQ accordion styling */
+details {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.35);
+}
+details summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  font-weight: 700;
+  color: var(--primary-color) !important;
+}
+details[open] summary {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+details > *:not(summary) {
+  padding: 12px 16px;
+}
+
+/* Chips for service areas */
+.chips { margin-top: 8px; }
+.chip {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 4px 6px 0 0;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.5);
+  color: var(--text-dark) !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.chip:hover { background: rgba(255,255,255,0.75); }
+
+/* Cards for related services */
+.cards .card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.5);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cards .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+.cards .card h3 { padding: 10px 12px; color: var(--primary-color) !important; }
 
