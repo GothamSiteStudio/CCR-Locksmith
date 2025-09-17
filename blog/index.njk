@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+title: Blog | CCR Locksmith | Metro Detroit
+description: Locksmith tips, guides and updates for Metro Detroit.
+---
+<h1>Blog</h1>
+<div class="posts-list">
+  {% for post in collections.posts %}
+    <article class="post-item">
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      {% if post.date %}<p><small>{{ post.date | date("MMMM d, yyyy") }}</small></p>{% endif %}
+      {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+    </article>
+  {% endfor %}
+  {% if (collections.posts | length) == 0 %}
+    <p>No posts yet. Create one in <code>blog/posts/</code>.</p>
+  {% endif %}
+</div>
+
