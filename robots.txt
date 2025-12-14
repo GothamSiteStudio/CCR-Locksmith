@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.carcommercialresidentialemergencylocksmithservice.com/sitemap.xml
+
+# Disallow admin/private pages
+Disallow: /partials/
+Disallow: /formspree-alternative.html
+Disallow: /left-sidebar.html
+Disallow: /right-sidebar.html
+Disallow: /no-sidebar.html

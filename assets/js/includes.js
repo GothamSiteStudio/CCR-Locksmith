@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (headerEl) load(headerEl, 'site-header');
   const trustEl = document.querySelector('div.trust-bar');
   if (trustEl) load(trustEl, 'trust-bar');
+  const navEl = document.querySelector('div#header');
+  if (navEl) load(navEl, 'nav');
   const footerEl = document.querySelector('footer#footer');
   if (footerEl) load(footerEl, 'footer');
 });

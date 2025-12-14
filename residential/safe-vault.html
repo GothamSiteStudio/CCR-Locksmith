@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home Safe & Vault Services in Metro Detroit | CCR Locksmith</title>
+  <title>Safe and Vault Services for Homes in Metro Detroit | CCR Locksmith</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Home safe opening, installation & bolting, combination changes, and lock repairs. Mobile, discreet service across Metro Detroit. Call (313) 889-3266." />
@@ -33,43 +33,75 @@
 
   <!-- LocalBusiness / Locksmith -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Locksmith",
-    "name": "Car Commercial Residential Emergency Locksmith Service",
-    "url": "https://www.carcommercialresidentialemergencylocksmithservice.com/",
-    "telephone": "+13138893266",
-    "areaServed": ["Detroit, MI", "Southfield, MI", "Westland, MI", "Dearborn, MI", "Livonia, MI"],
-    "openingHours": ["Mo-Su 00:00-23:59"],
-    "image": "https://www.carcommercialresidentialemergencylocksmithservice.com/images/Logo.png",
-    "priceRange": "$$"
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Residential Safe and Vault Services",
+  "areaServed": [
+    "Detroit MI","Southfield MI","Troy MI","Novi MI","Royal Oak MI","Birmingham MI",
+    "Bloomfield Hills MI","West Bloomfield MI","Oak Park MI","Pontiac MI","Auburn Hills MI",
+    "Warren MI","Sterling Heights MI","Clinton Township MI","Shelby Township MI","Macomb Township MI",
+    "Dearborn MI","Livonia MI","Canton MI","Westland MI","Taylor MI","Dearborn Heights MI",
+    "Allen Park MI","Lincoln Park MI","Wyandotte MI","Garden City MI","Inkster MI",
+    "St. Clair Shores MI","Fraser MI","Eastpointe MI","Roseville MI","Harrison Township MI","Mount Clemens MI"
+  ],
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "CCR Locksmith",
+    "telephone": "+1-313-889-3266",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Southfield",
+      "addressRegion": "MI",
+      "postalCode": "48076"
+    },
+    "areaServed": "Metro Detroit",
+    "url": "https://www.carcommercialresidentialemergencylocksmithservice.com/"
   }
-  </script>
+}
+</script>
 
-  <!-- Service schema for this page -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Residential Safe & Vault Services",
-    "areaServed": [
-      "Detroit MI","Southfield MI","Troy MI","Novi MI","Royal Oak MI","Birmingham MI",
-      "Bloomfield Hills MI","West Bloomfield MI","Oak Park MI","Pontiac MI","Auburn Hills MI",
-      "Warren MI","Sterling Heights MI","Clinton Township MI","Shelby Township MI","Macomb Township MI",
-      "Dearborn MI","Livonia MI","Canton MI","Westland MI","Taylor MI","Dearborn Heights MI",
-      "Allen Park MI","Lincoln Park MI","Wyandotte MI","Garden City MI","Inkster MI",
-      "St. Clair Shores MI","Fraser MI","Eastpointe MI","Roseville MI","Harrison Township MI","Mount Clemens MI"
-    ],
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "CCR Locksmith",
-      "telephone": "+1-313-889-3266",
-      "address": {"@type":"PostalAddress","addressLocality":"Southfield","addressRegion":"MI","postalCode":"48076"},
-      "areaServed": "Metro Detroit",
-      "url": "https://www.carcommercialresidentialemergencylocksmithservice.com/"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you open my home safe if I forgot the combination?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We open most home safes and gun safes when the code, combination, or key is lost. We use methods designed to protect your safe and contents whenever possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will opening my safe damage it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In many cases we can open home safes with little or no visible damage. When drilling is required, we drill in a controlled way then repair the lock or replace it so the safe can be used again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you install and bolt down safes in houses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We deliver and install home safes, bolt them into concrete or structural framing, and make sure doors open and close correctly in the final location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you change my safe combination or keypad code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We change combinations and digital codes on many home safes and gun safes. This is common after a move, staff change, or when you want to reset who has access."
+      }
     }
-  }
-  </script>
+  ]
+}
+</script>
+
 
   <!-- FAQ schema -->
   <script type="application/ld+json">
@@ -108,12 +140,12 @@
 </head>
 
 <body class="homepage is-preload">
-  <!-- Header (unchanged) -->
+  <!-- Header -->
   <header class="site-header">
     <div class="header-container">
       <div class="logo">
         <a href="../index.html">
-          <img src="../images/Logo.png" alt="CCR Locksmith - 24/7 Emergency Services" />
+          <img src="http://127.0.0.1:5500/images/Logo.png" alt="CCR Locksmith - 24/7 Emergency Services">
         </a>
       </div>
       <div class="quick-contact">
@@ -148,6 +180,7 @@
     <!-- Header/Nav (unchanged) -->
     <div id="header">
       <nav id="nav">
+        <div class="container">
         <!-- *** DO NOT MODIFY NAV CONTENT *** -->
         <!-- (kept exactly as in your template) -->
         <ul class="nav-menu">
@@ -271,9 +304,69 @@
             </ul>
           </li>
 
-          <li><a href="../service-areas.html">Service Areas</a></li>
+          <!-- Service Areas Mega Dropdown -->
+          <li class="dropdown mega-dropdown">
+            <a href="../service-areas.html" class="dropdown-toggle">
+              Service Areas <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="mega-menu service-areas-menu">
+              <div class="mega-section">
+                <p>Oakland County</p>
+                <ul>
+                  <li><a href="../service-areas/southfield.html">Southfield</a></li>
+                  <li><a href="../service-areas/farmington-hills.html">Farmington Hills</a></li>
+                  <li><a href="../service-areas/novi.html">Novi</a></li>
+                  <li><a href="../service-areas/troy.html">Troy</a></li>
+                  <li><a href="../service-areas/royal-oak.html">Royal Oak</a></li>
+                  <li><a href="../service-areas/birmingham.html">Birmingham</a></li>
+                  <li><a href="../service-areas/bloomfield-hills.html">Bloomfield Hills</a></li>
+                  <li><a href="../service-areas/west-bloomfield.html">West Bloomfield</a></li>
+                  <li><a href="../service-areas/oak-park.html">Oak Park</a></li>
+                  <li><a href="../service-areas/pontiac.html">Pontiac</a></li>
+                  <li><a href="../service-areas/auburn-hills.html">Auburn Hills</a></li>
+                  <li><a href="../service-areas/clarkston.html">Clarkston</a></li>
+                  <li><a href="../service-areas/waterford.html">Waterford</a></li>
+                </ul>
+              </div>
+              <div class="mega-section">
+                <p>Wayne County</p>
+                <ul>
+                  <li><a href="../service-areas/detroit.html">Detroit</a></li>
+                  <li><a href="../service-areas/dearborn.html">Dearborn</a></li>
+                  <li><a href="../service-areas/livonia.html">Livonia</a></li>
+                  <li><a href="../service-areas/canton.html">Canton</a></li>
+                  <li><a href="../service-areas/westland.html">Westland</a></li>
+                  <li><a href="../service-areas/taylor.html">Taylor</a></li>
+                  <li><a href="../service-areas/dearborn-heights.html">Dearborn Heights</a></li>
+                  <li><a href="../service-areas/allen-park.html">Allen Park</a></li>
+                  <li><a href="../service-areas/lincoln-park.html">Lincoln Park</a></li>
+                  <li><a href="../service-areas/wyandotte.html">Wyandotte</a></li>
+                  <li><a href="../service-areas/garden-city.html">Garden City</a></li>
+                  <li><a href="../service-areas/inkster.html">Inkster</a></li>
+                </ul>
+              </div>
+              <div class="mega-section">
+                <p>Macomb County</p>
+                <ul>
+                  <li><a href="../service-areas/warren.html">Warren</a></li>
+                  <li><a href="../service-areas/sterling-heights.html">Sterling Heights</a></li>
+                  <li><a href="../service-areas/clinton-township.html">Clinton Township</a></li>
+                  <li><a href="../service-areas/shelby-township.html">Shelby Township</a></li>
+                  <li><a href="../service-areas/macomb-township.html">Macomb Township</a></li>
+                  <li><a href="../service-areas/chesterfield-township.html">Chesterfield Township</a></li>
+                  <li><a href="../service-areas/roseville.html">Roseville</a></li>
+                  <li><a href="../service-areas/eastpointe.html">Eastpointe</a></li>
+                  <li><a href="../service-areas/st-clair-shores.html">St. Clair Shores</a></li>
+                  <li><a href="../service-areas/fraser.html">Fraser</a></li>
+                  <li><a href="../service-areas/harrison-township.html">Harrison Township</a></li>
+                  <li><a href="../service-areas/mount-clemens.html">Mount Clemens</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
           <li><a href="../contact.html">Contact Us</a></li>
         </ul>
+        </div>
       </nav>
     </div>
 
@@ -527,6 +620,7 @@
   <script src="../assets/js/breakpoints.min.js" defer></script>
   <script src="../assets/js/util.js" defer></script>
   <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/includes.js" defer></script>
 
   <a class="call-now" href="tel:+13138893266">Call Now</a>
 </body>
