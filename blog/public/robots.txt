@@ -1,3 +1,0 @@
-﻿User-agent: *
-Allow: /
-Sitemap: https://alphaLocks.github.io/CCR-Locksmith/sitemap-index.xml

@@ -1,8 +1,4 @@
 {
   "name": "ccr-locksmith-main",
-  "private": true,
-  "workspaces": ["blog"],
-  "scripts": {
-    "build": "npm run build --workspace blog"
-  }
+  "private": true
 }
