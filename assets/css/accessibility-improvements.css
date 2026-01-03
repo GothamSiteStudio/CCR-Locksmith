@@ -1,0 +1,611 @@
+/**
+ * Accessibility and UX Improvements for CCR Locksmith
+ * Enhances visibility, usability, and accessibility across the site
+ * WCAG 2.1 AA Compliant
+ */
+
+/* ================================
+   1. IMPROVED COLOR CONTRAST
+   ================================ */
+
+/* Better text contrast on dark backgrounds */
+body {
+	color: #e8e8e8 !important; /* Improved from #cccccc */
+	background: #1a1a1a !important; /* Slightly lighter dark background */
+}
+
+/* Improved heading contrast */
+h1, h2, h3, h4, h5, h6 {
+	color: #2d2433 !important; /* Darker for better contrast */
+}
+
+/* Better link contrast and visibility */
+a {
+	color: #5a9fd4 !important; /* Better blue contrast */
+	text-decoration: underline;
+	text-decoration-color: rgba(90, 159, 212, 0.3);
+	text-underline-offset: 3px;
+}
+
+a:hover, a:focus {
+	color: #ff6b5a !important; /* Better hover color */
+	text-decoration-color: rgba(255, 107, 90, 0.5);
+	background-color: rgba(255, 107, 90, 0.1);
+	outline: none;
+}
+
+/* Better button contrast */
+.button, button, input[type="submit"] {
+	background-color: #d45a48 !important; /* Better red */
+	color: #ffffff !important;
+	font-weight: 600;
+	border: 2px solid transparent;
+	transition: all 0.3s ease;
+}
+
+.button:hover, .button:focus,
+button:hover, button:focus,
+input[type="submit"]:hover, input[type="submit"]:focus {
+	background-color: #ff6b5a !important;
+	color: #ffffff !important;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(212, 90, 72, 0.4);
+}
+
+/* CTA Button improvements */
+.cta-button {
+	background-color: #d45a48 !important;
+	color: #ffffff !important;
+	font-weight: 700 !important;
+	font-size: 1.1rem !important;
+	padding: 0.9rem 2rem !important;
+	border-radius: 6px !important;
+	min-height: 48px !important;
+	min-width: 120px !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover, .cta-button:focus {
+	background-color: #ff6b5a !important;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 16px rgba(212, 90, 72, 0.5);
+}
+
+/* ================================
+   2. FOCUS INDICATORS
+   ================================ */
+
+/* Strong, visible focus indicators for keyboard navigation */
+*:focus {
+	outline: 3px solid #ffa500 !important;
+	outline-offset: 3px !important;
+	box-shadow: 0 0 0 5px rgba(255, 165, 0, 0.2) !important;
+}
+
+/* Special focus for links */
+a:focus {
+	outline: 3px solid #ffa500 !important;
+	outline-offset: 2px !important;
+	background-color: rgba(255, 165, 0, 0.1) !important;
+	border-radius: 2px;
+}
+
+/* Button focus states */
+.button:focus, button:focus, input:focus, textarea:focus, select:focus {
+	outline: 3px solid #ffa500 !important;
+	outline-offset: 2px !important;
+	box-shadow: 0 0 0 5px rgba(255, 165, 0, 0.2) !important;
+}
+
+/* Navigation focus */
+nav a:focus {
+	background-color: rgba(255, 165, 0, 0.15) !important;
+	outline: 3px solid #ffa500 !important;
+	outline-offset: -2px !important;
+}
+
+/* Skip link - visible on focus */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: #ffa500;
+	color: #000;
+	padding: 12px 20px;
+	text-decoration: none;
+	font-weight: bold;
+	z-index: 100000;
+	border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+	top: 0;
+	outline: 3px solid #000;
+}
+
+/* ================================
+   3. IMPROVED TYPOGRAPHY & READABILITY
+   ================================ */
+
+/* Use relative units instead of pt */
+body {
+	font-size: 1rem; /* Instead of 15pt */
+	line-height: 1.6; /* Better readability */
+}
+
+/* Better heading sizes */
+h1 {
+	font-size: 2.5rem;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 1.3;
+	margin-bottom: 0.875rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	line-height: 1.4;
+	margin-bottom: 0.75rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+	line-height: 1.4;
+	margin-bottom: 0.625rem;
+}
+
+h5 {
+	font-size: 1.125rem;
+	line-height: 1.5;
+}
+
+h6 {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+/* Better paragraph spacing */
+p {
+	margin-bottom: 1.25rem;
+	max-width: 75ch; /* Optimal line length */
+}
+
+/* Improved text alignment for better readability */
+p {
+	text-align: left !important; /* Remove justify for better readability */
+}
+
+/* ================================
+   4. TOUCH TARGETS & INTERACTIVE ELEMENTS
+   ================================ */
+
+/* Minimum touch target size 44x44px (WCAG 2.1 AA) */
+button, .button, a.button, 
+input[type="submit"], 
+input[type="button"],
+.nav-menu a,
+.dropdown-toggle {
+	min-height: 44px !important;
+	min-width: 44px !important;
+	padding: 12px 20px !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+/* Better spacing for clickable elements */
+.nav-menu li {
+	margin: 4px 8px !important;
+}
+
+/* Improved hover states */
+button:hover, .button:hover,
+a:hover {
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+/* ================================
+   5. FORM ACCESSIBILITY
+   ================================ */
+
+/* Better form field visibility */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+	background-color: #ffffff !important;
+	color: #1a1a1a !important;
+	border: 2px solid #666 !important;
+	border-radius: 4px !important;
+	padding: 12px 16px !important;
+	font-size: 1rem !important;
+	min-height: 44px !important;
+	transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	border-color: #ffa500 !important;
+	background-color: #fffef0 !important;
+}
+
+/* Required field indicator */
+input:required,
+textarea:required,
+select:required {
+	border-left: 4px solid #d45a48 !important;
+}
+
+/* Error states */
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+	border-color: #d32f2f !important;
+	background-color: #ffebee !important;
+}
+
+/* Success states */
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+	border-color: #388e3c !important;
+}
+
+/* Better label visibility */
+label {
+	display: block !important;
+	font-weight: 600 !important;
+	color: #2d2433 !important;
+	margin-bottom: 8px !important;
+	font-size: 1rem !important;
+}
+
+/* ================================
+   6. NAVIGATION IMPROVEMENTS
+   ================================ */
+
+/* Better mobile menu visibility */
+#navPanel {
+	background-color: #2d2433 !important;
+	color: #ffffff !important;
+}
+
+#navPanel a {
+	color: #ffffff !important;
+	padding: 16px 20px !important;
+	display: block !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+#navPanel a:hover,
+#navPanel a:focus {
+	background-color: rgba(255, 165, 0, 0.2) !important;
+	color: #ffa500 !important;
+}
+
+/* Dropdown menu improvements */
+.dropdown-menu {
+	background-color: #ffffff !important;
+	border: 2px solid #ddd !important;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+	border-radius: 4px !important;
+}
+
+.dropdown-menu a {
+	color: #1a1a1a !important;
+	padding: 12px 20px !important;
+	min-height: 44px !important;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+	background-color: #f5f5f5 !important;
+	color: #d45a48 !important;
+}
+
+/* ================================
+   7. RESPONSIVE IMPROVEMENTS
+   ================================ */
+
+/* Better mobile font sizes */
+@media screen and (max-width: 736px) {
+	body {
+		font-size: 0.9375rem; /* 15px */
+	}
+	
+	h1 {
+		font-size: 2rem;
+	}
+	
+	h2 {
+		font-size: 1.75rem;
+	}
+	
+	h3 {
+		font-size: 1.375rem;
+	}
+	
+	/* Better mobile touch targets */
+	button, .button, a.button {
+		min-height: 48px !important;
+		padding: 14px 24px !important;
+		font-size: 1.0625rem !important;
+	}
+}
+
+/* ================================
+   8. TRUST BAR IMPROVEMENTS
+   ================================ */
+
+.trust-bar {
+	background-color: #2d4a5e !important;
+	color: #ffffff !important;
+	padding: 20px 0 !important;
+	border-bottom: 3px solid #5a9fd4 !important;
+}
+
+.trust-items {
+	display: flex !important;
+	flex-wrap: nowrap !important;
+	justify-content: center !important;
+	align-items: center !important;
+	gap: 16px !important;
+}
+
+.trust-item {
+	color: #ffffff !important;
+	font-size: 1.1rem !important;
+	font-weight: 600 !important;
+	padding: 12px 20px !important;
+	background-color: rgba(90, 159, 212, 0.15) !important;
+	border-radius: 25px !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	transition: all 0.3s ease !important;
+	white-space: nowrap !important;
+}
+
+.trust-item:hover {
+	background-color: rgba(90, 159, 212, 0.3) !important;
+	transform: translateY(-2px) !important;
+}
+
+.trust-item i {
+	color: #ffa500 !important;
+	font-size: 1.5rem !important;
+	margin-right: 12px !important;
+	background-color: rgba(255, 255, 255, 0.2) !important;
+	padding: 8px !important;
+	border-radius: 50% !important;
+	width: 40px !important;
+	height: 40px !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+.trust-item span {
+	color: #ffffff !important;
+	font-weight: 600 !important;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Responsive - במסכים קטנים יעברו שורה */
+@media screen and (max-width: 840px) {
+	.trust-items {
+		flex-wrap: wrap !important;
+	}
+}
+
+/* ================================
+   9. CALL NOW BUTTON (FLOATING)
+   ================================ */
+
+.call-now {
+	background-color: #d45a48 !important;
+	color: #ffffff !important;
+	font-weight: 700 !important;
+	font-size: 1.125rem !important;
+	padding: 16px 24px !important;
+	min-height: 56px !important;
+	min-width: 56px !important;
+	border-radius: 50px !important;
+	box-shadow: 0 4px 16px rgba(212, 90, 72, 0.4) !important;
+	animation: pulse 2s infinite;
+}
+
+.call-now:hover,
+.call-now:focus {
+	background-color: #ff6b5a !important;
+	transform: scale(1.05);
+	box-shadow: 0 6px 20px rgba(255, 107, 90, 0.5) !important;
+}
+
+@keyframes pulse {
+	0%, 100% {
+		box-shadow: 0 4px 16px rgba(212, 90, 72, 0.4);
+	}
+	50% {
+		box-shadow: 0 4px 24px rgba(212, 90, 72, 0.7);
+	}
+}
+
+/* ================================
+   10. LOADING & PERFORMANCE
+   ================================ */
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+	
+	.call-now {
+		animation: none;
+	}
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	* {
+		border-width: 2px !important;
+	}
+	
+	a, button, .button {
+		border: 2px solid currentColor !important;
+	}
+}
+
+/* Dark mode support (if user prefers) */
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #0d0d0d !important;
+		color: #f0f0f0 !important;
+	}
+}
+
+/* ================================
+   11. IMPROVED TABLE ACCESSIBILITY
+   ================================ */
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1.5rem 0;
+}
+
+th, td {
+	padding: 12px 16px !important;
+	text-align: left;
+	border: 1px solid #3a5571 !important;
+}
+
+th {
+	background-color: #2d4a5e !important;
+	color: #ffffff !important;
+	font-weight: 600;
+}
+
+/* שורות עם רקע כהה */
+tr:nth-child(odd) td {
+	background-color: #2d4a5e !important;
+	color: #ffffff !important;
+	font-weight: 500;
+}
+
+/* שורות עם רקע בהיר */
+tr:nth-child(even) td {
+	background-color: #e8f2f7 !important;
+	color: #1a1a1a !important;
+	font-weight: 500;
+}
+
+tr:hover td {
+	background-color: #5a9fd4 !important;
+	color: #ffffff !important;
+	transform: translateX(2px);
+	transition: all 0.2s ease;
+}
+
+/* ================================
+   12. PRINT STYLES
+   ================================ */
+
+@media print {
+	body {
+		background: white !important;
+		color: black !important;
+	}
+	
+	a {
+		text-decoration: underline !important;
+		color: blue !important;
+	}
+	
+	.no-print,
+	.call-now,
+	#navButton,
+	#navPanel {
+		display: none !important;
+	}
+}
+
+/* ================================
+   13. SCREEN READER IMPROVEMENTS
+   ================================ */
+
+/* Screen reader only text */
+.sr-only {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border-width: 0 !important;
+}
+
+.sr-only-focusable:focus {
+	position: static !important;
+	width: auto !important;
+	height: auto !important;
+	overflow: visible !important;
+	clip: auto !important;
+	white-space: normal !important;
+}
+
+/* ================================
+   14. HEADER ICONS IMPROVEMENTS
+   ================================ */
+
+/* אייקונים בכותרת העליונה - מיקום, קישור, אינפורמציה */
+.site-header i,
+.header-container i,
+.quick-contact i,
+.contact-item i {
+	color: #5a9fd4 !important;
+	font-size: 1.2rem !important;
+	margin-right: 8px !important;
+}
+
+.site-header i.fa-envelope {
+	color: #5a9fd4 !important;
+}
+
+.site-header i.fa-clock {
+	color: #5a9fd4 !important;
+}
+
+.site-header i.fa-map-marker-alt {
+	color: #5a9fd4 !important;
+}
+
+.site-header i.fa-info-circle {
+	color: #5a9fd4 !important;
+}
+
+.site-header i.fa-link {
+	color: #5a9fd4 !important;
+}
+
+/* About section icons */
+section i.fas,
+section i.fa {
+	color: #2d4a5e !important;
+}
