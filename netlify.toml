@@ -1,0 +1,33 @@
+# Netlify Configuration
+
+# Build settings (if needed)
+[build]
+  publish = "."
+
+# Force HTTPS and www
+[[redirects]]
+  from = "http://carcommercialresidentialemergencylocksmithservice.com/*"
+  to = "https://www.carcommercialresidentialemergencylocksmithservice.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://carcommercialresidentialemergencylocksmithservice.com/*"
+  to = "https://www.carcommercialresidentialemergencylocksmithservice.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.carcommercialresidentialemergencylocksmithservice.com/*"
+  to = "https://www.carcommercialresidentialemergencylocksmithservice.com/:splat"
+  status = 301
+  force = true
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"

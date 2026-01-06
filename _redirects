@@ -1,7 +1,151 @@
 # Redirects and rewrites
 
+# ============================================
+# CANONICAL URL REDIRECTS
+# Redirect duplicate root-level files to their proper subfolder locations
+# ============================================
+
+# Redirect index.html to root
+/index.html / 301
+
+# ============================================
+# COMMERCIAL SERVICE REDIRECTS
+# Root-level commercial pages redirect to /commercial/ subfolder
+# ============================================
+/access-control-system-installation.html /commercial/access-control-system-installation.html 301
+/biometric-lock-systems.html /commercial/biometric-lock-systems.html 301
+/business-office-lockout.html /commercial/business-office-lockout.html 301
+/buzzer-intercom-system-installation.html /commercial/buzzer-intercom-system-installation.html 301
+/card-reader-proximity-reader-systems.html /commercial/card-reader-proximity-reader-systems.html 301
+/commercial-grade-lock-installation-repair.html /commercial/commercial-grade-lock-installation-repair.html 301
+/commercial-lock-rekeying.html /commercial/commercial-lock-rekeying.html 301
+/commercial-safe-opening-lockout.html /commercial/commercial-safe-opening-lockout.html 301
+/door-closer-installation-repair.html /commercial/door-closer-installation-repair.html 301
+/electric-strike-installation-repair.html /commercial/electric-strike-installation-repair.html 301
+/electronic-keypad-lock-installation.html /commercial/electronic-keypad-lock-installation.html 301
+/exit-device-installation-service.html /commercial/exit-device-installation-service.html 301
+/file-cabinet-lock-replacement.html /commercial/file-cabinet-lock-replacement.html 301
+/high-security-lock-installation.html /commercial/high-security-lock-installation.html 301
+/magnetic-lock-installation.html /commercial/magnetic-lock-installation.html 301
+/master-key-system-installation.html /commercial/master-key-system-installation.html 301
+/mortise-lock-installation-repair.html /commercial/mortise-lock-installation-repair.html 301
+/panic-bar-push-bar-installation.html /commercial/panic-bar-push-bar-installation.html 301
+/panic-bar-push-bar-repair.html /commercial/panic-bar-push-bar-repair.html 301
+/safe-combination-changing-repair.html /commercial/safe-combination-changing-repair.html 301
+/safe-installation-bolting.html /commercial/safe-installation-bolting.html 301
+
+# ============================================
+# RESIDENTIAL SERVICE REDIRECTS
+# Root-level residential pages redirect to /residential/ subfolder
+# ============================================
+/apartment-condo-lockout.html /residential/apartment-condo-lockout.html 301
+/broken-key-extraction.html /residential/broken-key-extraction.html 301
+/burglary-breakin-damage-repair.html /residential/burglary-breakin-damage-repair.html 301
+/deadbolt-installation.html /residential/deadbolt-installation.html 301
+/high-security-lock.html /residential/high-security-lock.html 301
+/home-security-consultation.html /residential/home-security-consultation.html 301
+/house-lockout.html /residential/house-lockout.html 301
+/key-system-services.html /residential/key-system-services.html 301
+/keyless-entry.html /residential/keyless-entry.html 301
+/lock-installation.html /residential/lock-installation.html 301
+/lock-repair.html /residential/lock-repair.html 301
+/mailbox-lock.html /residential/mailbox-lock.html 301
+/master-key-system.html /residential/master-key-system.html 301
+/rekeying.html /residential/rekeying.html 301
+/safe-vault.html /residential/safe-vault.html 301
+/sliding-door-lock.html /residential/sliding-door-lock.html 301
+/smart-home-security.html /residential/smart-home-security.html 301
+/window-lock.html /residential/window-lock.html 301
+
+# ============================================
+# EMERGENCY SERVICE REDIRECTS
+# Root-level emergency pages redirect to /emergency/ subfolder
+# ============================================
+/broken-key-extraction-emergency.html /emergency/broken-key-extraction-emergency.html 301
+/business-office-lockout-emergency.html /emergency/business-office-lockout-emergency.html 301
+/car-lockout-service.html /emergency/car-lockout-service.html 301
+/emergency-car-key-replacement.html /emergency/emergency-car-key-replacement.html 301
+/emergency-commercial-rekeying.html /emergency/emergency-commercial-rekeying.html 301
+/emergency-ignition-repair.html /emergency/emergency-ignition-repair.html 301
+/emergency-lock-rekeying.html /emergency/emergency-lock-rekeying.html 301
+/emergency-lock-repair-replacement.html /emergency/emergency-lock-repair-replacement.html 301
+/emergency-panic-bar-exit-device-repair.html /emergency/emergency-panic-bar-exit-device-repair.html 301
+/post-breakin-door-lock-repair.html /emergency/post-breakin-door-lock-repair.html 301
+/safe-opening-lockout-service.html /emergency/safe-opening-lockout-service.html 301
+/trunk-lockout-service.html /emergency/trunk-lockout-service.html 301
+/emergency-house-lockout.html /residential/house-lockout.html 301
+/eviction-locksmith-services.html /residential/rekeying.html 301
+
+# ============================================
 # Redirect form submissions back to contact page with success message
+# ============================================
 /contact-success /contact.html 200
 
-# Handle any trailing slashes
-/* /index.html 200
+# ============================================
+# FIX: Redirect nested/duplicate URLs to homepage
+# These URLs were created by relative links being crawled incorrectly
+# Using 301 redirects to tell Google these are permanently moved
+# ============================================
+
+# Nested residential paths - redirect to homepage
+/residential/residential/* / 301
+/residential/commercial/* / 301
+/residential/emergency/* / 301
+/residential/automotive/* / 301
+/residential/service-areas/* / 301
+/residential/prices/* / 301
+/residential/blog/* / 301
+
+# Nested commercial paths
+/commercial/residential/* / 301
+/commercial/commercial/* / 301
+/commercial/emergency/* / 301
+/commercial/automotive/* / 301
+/commercial/service-areas/* / 301
+/commercial/prices/* / 301
+/commercial/blog/* / 301
+
+# Nested emergency paths
+/emergency/residential/* / 301
+/emergency/commercial/* / 301
+/emergency/emergency/* / 301
+/emergency/automotive/* / 301
+/emergency/service-areas/* / 301
+/emergency/prices/* / 301
+/emergency/blog/* / 301
+
+# Nested automotive paths
+/automotive/residential/* / 301
+/automotive/commercial/* / 301
+/automotive/emergency/* / 301
+/automotive/automotive/* / 301
+/automotive/service-areas/* / 301
+/automotive/prices/* / 301
+/automotive/blog/* / 301
+
+# Nested service-areas paths
+/service-areas/residential/* / 301
+/service-areas/commercial/* / 301
+/service-areas/emergency/* / 301
+/service-areas/automotive/* / 301
+/service-areas/service-areas/* / 301
+/service-areas/prices/* / 301
+/service-areas/blog/* / 301
+
+# Nested prices paths
+/prices/residential/* / 301
+/prices/commercial/* / 301
+/prices/emergency/* / 301
+/prices/automotive/* / 301
+/prices/service-areas/* / 301
+/prices/prices/* / 301
+/prices/blog/* / 301
+
+# Nested blog paths
+/blog/residential/* / 301
+/blog/commercial/* / 301
+/blog/emergency/* / 301
+/blog/automotive/* / 301
+/blog/service-areas/* / 301
+/blog/prices/* / 301
+/blog/blog/* / 301
