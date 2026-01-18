@@ -14,12 +14,23 @@
 
 		  gtag('config', 'G-G1CZ4BTQTH');
 		</script>
+		<!-- Preconnect to Google Fonts for faster loading -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<title>Apartment & Condo Lockout Services | CCR Locksmith</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Locked out of your apartment or condo? We provide fast, non-destructive entry services. 24/7 emergency locksmith for tenants and property managers." />
+		<!-- Critical CSS loaded normally -->
 		<link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
+
+		<!-- Non-critical CSS deferred -->
+		<link rel="stylesheet" href="assets/css/accessibility-improvements.css" media="print" onload="this.media='all'">
+
+		<!-- Fallback for browsers without JS -->
+		<noscript>
+		  <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
+		</noscript>
 		<link rel="canonical" href="https://www.carcommercialresidentialemergencylocksmithservice.com/apartment-condo-lockout" />
 		<script type="application/ld+json">
 		{

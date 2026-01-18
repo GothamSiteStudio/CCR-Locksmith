@@ -14,10 +14,23 @@
       function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-G1CZ4BTQTH');
     </script>
 
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Critical CSS loaded normally -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    <!-- Non-critical CSS deferred -->
+    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers without JS -->
+    <noscript>
+      <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
     
     <!-- JSON-LD: LocalBusiness (Locksmith) -->
     <script type="application/ld+json">

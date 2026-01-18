@@ -14,12 +14,23 @@
 
 		  gtag('config', 'G-G1CZ4BTQTH');
 		</script>
+		<!-- Preconnect to Google Fonts for faster loading -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<title>Card Reader & Proximity Reader Systems | CCR Locksmith</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Card reader and proximity reader system installation for businesses. Secure, trackable entry solutions for employees and staff using keycards and fobs." />
+		<!-- Critical CSS loaded normally -->
 		<link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
+
+		<!-- Non-critical CSS deferred -->
+		<link rel="stylesheet" href="assets/css/accessibility-improvements.css" media="print" onload="this.media='all'">
+
+		<!-- Fallback for browsers without JS -->
+		<noscript>
+		  <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
+		</noscript>
 		<link rel="canonical" href="https://www.carcommercialresidentialemergencylocksmithservice.com/card-reader-proximity-reader-systems" />
 		<script type="application/ld+json">
 		{

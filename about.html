@@ -11,6 +11,10 @@
       gtag('config', 'G-G1CZ4BTQTH');
     </script>
     
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <title>About Us | CCR Locksmith | Metro Detroit</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,11 +29,24 @@
     <meta name="twitter:title" content="About CCR Locksmith | Metro Detroit">
     <meta name="twitter:description" content="Local, licensed, and reliable locksmith service. (313) 889-3266.">
     <meta name="twitter:image" content="https://www.carcommercialresidentialemergencylocksmithservice.com/images/Logo.png">
+    
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS loaded normally -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Non-critical CSS deferred -->
+    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" media="print" onload="this.media='all'">
+
+    <!-- Fallback for browsers without JS -->
+    <noscript>
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
     <style>
         /* Custom styles for about page - change white/light text to #224579 and make colored text bold */
         .wrapper.style1 .container #content {

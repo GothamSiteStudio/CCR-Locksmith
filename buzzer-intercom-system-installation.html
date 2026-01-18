@@ -14,12 +14,23 @@
 
 		  gtag('config', 'G-G1CZ4BTQTH');
 		</script>
+		<!-- Preconnect to Google Fonts for faster loading -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<title>Buzzer & Intercom System Installation | CCR Locksmith</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Professional buzzer and intercom system installation for offices, apartment buildings, and commercial properties. Audio and video entry systems." />
+		<!-- Critical CSS loaded normally -->
 		<link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
+
+		<!-- Non-critical CSS deferred -->
+		<link rel="stylesheet" href="assets/css/accessibility-improvements.css" media="print" onload="this.media='all'">
+
+		<!-- Fallback for browsers without JS -->
+		<noscript>
+		  <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
+		</noscript>
 		<link rel="canonical" href="https://www.carcommercialresidentialemergencylocksmithservice.com/buzzer-intercom-system-installation" />
 		<script type="application/ld+json">
 		{

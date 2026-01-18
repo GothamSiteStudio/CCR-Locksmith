@@ -16,12 +16,25 @@
       gtag('config', 'G-G1CZ4BTQTH');
     </script>
     
+		<!-- Preconnect to Google Fonts for faster loading -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
 		<title>Right Sidebar - Helios by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<!-- Critical CSS loaded normally -->
 		<link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Non-critical CSS deferred -->
+		<link rel="stylesheet" href="assets/css/accessibility-improvements.css" media="print" onload="this.media='all'">
+		
+		<!-- Fallback for browsers without JS -->
+		<noscript>
+			<link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
+			<link rel="stylesheet" href="assets/css/noscript.css" />
+		</noscript>
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">

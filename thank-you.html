@@ -11,14 +11,27 @@
       gtag('config', 'G-G1CZ4BTQTH');
     </script>
     
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <title>Thank You - CCR Locksmith</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Critical CSS loaded normally -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    <!-- Non-critical CSS deferred -->
+    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/accessibility-improvements.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers without JS -->
+    <noscript>
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
     <meta http-equiv="refresh" content="5;url=index.html">
 </head>
 <body class="is-preload">
