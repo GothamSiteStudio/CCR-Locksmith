@@ -23,18 +23,22 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		
-		<!-- Critical CSS loaded normally -->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		
-		<!-- Non-critical CSS deferred -->
-		<link rel="stylesheet" href="assets/css/accessibility-improvements.css" media="print" onload="this.media='all'">
-		
-		<!-- Fallback for browsers without JS -->
-		<noscript>
-			<link rel="stylesheet" href="assets/css/accessibility-improvements.css" />
-		</noscript>
-		
-		<link rel="canonical" href="https://www.carcommercialresidentialemergencylocksmithservice.com/magnetic-lock-installation" />
+	<!-- Preload critical fonts -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600&display=swap">
+	<link rel="preload" as="style" href="assets/css/fontawesome-all.min.css">
+	
+	<!-- Critical CSS loaded normally -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	
+	<!-- Non-critical CSS deferred -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600&display=swap" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="assets/css/accessibility-improvements.css" media="print" onload="this.media='all'">
+	
+	<!-- Fallback for browsers without JS -->
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600&display=swap" />
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
