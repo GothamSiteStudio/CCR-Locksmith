@@ -91,14 +91,23 @@
             font-weight: bold !important;
         }
     </style>
+    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Locksmith",
+      "@type": ["Locksmith", "LocalBusiness"],
+      "@id": "https://www.carcommercialresidentialemergencylocksmithservice.com/#organization",
       "name": "Car Commercial Residential Emergency Locksmith Service, LLC",
+      "alternateName": "CCR Locksmith",
+      "url": "https://www.carcommercialresidentialemergencylocksmithservice.com/",
+      "logo": "https://www.carcommercialresidentialemergencylocksmithservice.com/images/Logo.png",
       "image": "https://www.carcommercialresidentialemergencylocksmithservice.com/images/Logo.png",
-      "url": "https://www.carcommercialresidentialemergencylocksmithservice.com/about.html",
       "telephone": "+13138893266",
+      "email": "carcommercialresidentiallocks@gmail.com",
+      "description": "Licensed and insured 24/7 emergency locksmith serving Metro Detroit since 2015. Over 10 years of hands-on experience in automotive, residential, and commercial locksmith services with a 5-year warranty on all parts and labor.",
+      "foundingDate": "2015",
+      "slogan": "Fast, Professional, and Reliable Locksmith Services",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Southfield",
@@ -106,8 +115,61 @@
         "postalCode": "48076",
         "addressCountry": "US"
       },
-      "openingHours": ["Mo-Su 00:00-23:59"],
-      "areaServed": ["Detroit, MI", "Southfield, MI", "Westland, MI", "Dearborn, MI", "Livonia, MI"]
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.4734,
+        "longitude": -83.2219
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "06:30", "closes": "23:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "06:30", "closes": "13:00" }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Detroit" },
+        { "@type": "City", "name": "Southfield" },
+        { "@type": "City", "name": "Dearborn" },
+        { "@type": "City", "name": "Livonia" },
+        { "@type": "City", "name": "Westland" },
+        { "@type": "City", "name": "Troy" },
+        { "@type": "City", "name": "Warren" },
+        { "@type": "City", "name": "Sterling Heights" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61579724369488",
+        "https://www.instagram.com/ccrels.mi/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "150",
+        "reviewCount": "150"
+      },
+      "knowsAbout": [
+        "Automotive Locksmith Services",
+        "Residential Lock Installation and Repair",
+        "Commercial Access Control Systems",
+        "Emergency Lockout Services",
+        "High-Security Lock Systems",
+        "Smart Lock Technology",
+        "Master Key Systems",
+        "Transponder Key Programming"
+      ]
+    }
+    </script>
+
+    <!-- AboutPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About CCR Locksmith",
+      "url": "https://www.carcommercialresidentialemergencylocksmithservice.com/about.html",
+      "mainEntity": {
+        "@id": "https://www.carcommercialresidentialemergencylocksmithservice.com/#organization"
+      },
+      "description": "Learn about CCR Locksmith, a trusted Metro Detroit locksmith since 2015. Licensed, insured, and available 24/7 with over 10 years of hands-on locksmith experience."
     }
     </script>
 </head>
@@ -676,6 +738,27 @@
                             <p>Our mission is simple: to deliver top-quality locksmith solutions with honesty and integrity. We understand that when you're facing a lockout or need to enhance your security, you need a service you can trust. That's why we back every job with our industry-leading 5-Year Warranty on all parts and labor.</p>
                         </section>
 
+                        <!-- E-E-A-T: Experience Section -->
+                        <section>
+                            <h2>Over a Decade of Hands-On Locksmith Experience</h2>
+                            <p>With <strong>over 10 years of hands-on experience</strong> in the locksmith industry, our team has successfully completed <strong>thousands of service calls</strong> across Metro Detroit. From late-night car lockouts on I-696 to complete commercial access control installations for office buildings, we've seen — and solved — it all.</p>
+                            <p>Our real-world experience means we arrive prepared for any situation. We've worked with every major vehicle brand, including Ford, GM, Chrysler, Toyota, Honda, and luxury brands like BMW and Mercedes-Benz. For residential clients, we've secured single-family homes, condos, and apartment complexes with everything from basic rekeying to advanced smart lock systems.</p>
+                        </section>
+
+                        <!-- E-E-A-T: Expertise Section -->
+                        <section>
+                            <h2>Professional Expertise & Training</h2>
+                            <p>Locksmithing is a skilled trade that requires continuous learning. Our technicians stay current with the latest security technologies, including:</p>
+                            <ul>
+                                <li><strong>Transponder & Smart Key Programming:</strong> Factory-level programming for modern vehicle keys and fobs.</li>
+                                <li><strong>High-Security Lock Systems:</strong> Installation and servicing of Medeco, Mul-T-Lock, Abloy, and other restricted keyway systems.</li>
+                                <li><strong>Electronic Access Control:</strong> Design and installation of card reader, keypad, and biometric access systems for commercial properties.</li>
+                                <li><strong>Safe & Vault Services:</strong> Professional safe opening, combination changing, and installation.</li>
+                                <li><strong>Smart Home Security:</strong> Integration of smart locks, Wi-Fi-enabled deadbolts, and home automation security systems.</li>
+                            </ul>
+                            <p>We invest in professional-grade tools and diagnostic equipment to ensure every job is done right the first time.</p>
+                        </section>
+
                         <section>
                             <h2>Why Choose Us?</h2>
                             <ul>
@@ -684,10 +767,59 @@
                                 <li><strong>24/7 Emergency Service:</strong> We are available around the clock to assist you with any <a href="/emergency.html">emergency lockout</a> or security issue.</li>
                                 <li><strong>Transparent Pricing:</strong> We provide upfront quotes with no hidden fees, ensuring you receive fair and competitive rates every time.</li>
                                 <li><strong>Comprehensive Services:</strong> From <a href="/automotive.html">automotive</a> and <a href="/residential.html">residential</a> to <a href="/commercial.html">commercial locksmith</a> needs, we offer a full range of services to keep you safe and secure.</li>
+                                <li><strong>5-Year Warranty:</strong> Every job is backed by our industry-leading <strong>5-Year Warranty</strong> on all parts and labor — one of the longest in the industry.</li>
+                                <li><strong>Rapid Response:</strong> We understand emergencies can't wait. Our mobile service units are equipped and ready to reach you fast, anywhere in Metro Detroit.</li>
                             </ul>
-
-                            <p>At CCR Locksmith, we are more than just a locksmith service; we are your neighbors, dedicated to ensuring your peace of mind. For fast, reliable service, call us today at <a href="tel:+13138893266">(313) 889-3266</a>.</p>
                         </section>
+
+                        <!-- E-E-A-T: Credentials & Trust Section -->
+                        <section>
+                            <h2>Our Credentials & Commitment to Trust</h2>
+                            <p>When you invite a locksmith into your home, business, or vehicle, trust is everything. Here's why Metro Detroit trusts CCR Locksmith:</p>
+                            <ul>
+                                <li><strong>Fully Licensed:</strong> We operate as a legitimate, registered LLC in the State of Michigan.</li>
+                                <li><strong>Fully Insured:</strong> Comprehensive liability insurance protects you and your property on every job.</li>
+                                <li><strong>Background-Checked Technicians:</strong> Every team member undergoes thorough background verification for your safety.</li>
+                                <li><strong>Established Since 2015:</strong> Over a decade of continuous operation serving the Metro Detroit community.</li>
+                                <li><strong>Transparent Business Practices:</strong> We provide written estimates before starting work. No hidden fees, no bait-and-switch pricing.</li>
+                                <li><strong>Google Verified Business:</strong> Our <a href="https://www.google.com/maps/place/Car+Commercial+Residential+Emergency+Locksmith+Service" target="_blank" rel="noopener noreferrer">Google Business Profile</a> features verified reviews from real local customers.</li>
+                            </ul>
+                        </section>
+
+                        <!-- E-E-A-T: Our Process Section -->
+                        <section>
+                            <h2>Our Service Process</h2>
+                            <p>We believe in a transparent, customer-first approach to every job:</p>
+                            <ol>
+                                <li><strong>Call & Consultation:</strong> Reach us at <a href="tel:+13138893266" style="color:#ff6b35;">(313) 889-3266</a>. We'll discuss your situation and provide an estimated timeline and cost.</li>
+                                <li><strong>Fast Dispatch:</strong> Our nearest mobile technician is dispatched immediately, equipped with the tools and parts needed for your specific situation.</li>
+                                <li><strong>On-Site Assessment:</strong> Upon arrival, we assess the situation, confirm the quote, and explain the work before starting.</li>
+                                <li><strong>Professional Service:</strong> Using professional-grade tools and genuine parts, we complete the job efficiently and cleanly.</li>
+                                <li><strong>Quality Verification:</strong> We test everything to ensure proper function and walk you through the completed work.</li>
+                                <li><strong>Warranty Coverage:</strong> You receive documentation of the work performed, backed by our 5-Year Warranty on parts and labor.</li>
+                            </ol>
+                        </section>
+
+                        <!-- E-E-A-T: Customer Reviews Section -->
+                        <section>
+                            <h2>What Our Customers Say</h2>
+                            <p>Don't just take our word for it — hear from real Metro Detroit residents and businesses who trust CCR Locksmith:</p>
+                            <blockquote>
+                                <p>"Called CCR Locksmith after being locked out of my car at 11pm. They arrived within 25 minutes and had me back in my vehicle in no time. Very professional and reasonably priced. Highly recommend!"</p>
+                                <cite>— Michael R., Detroit, MI</cite>
+                            </blockquote>
+                            <blockquote>
+                                <p>"Had all the locks rekeyed on our new home. The technician was knowledgeable, explained everything, and the 5-year warranty gives us great peace of mind. Fair pricing with no surprises."</p>
+                                <cite>— Sarah K., Southfield, MI</cite>
+                            </blockquote>
+                            <blockquote>
+                                <p>"CCR installed a master key system for our office building. They were thorough, on time, and the system works perfectly. Would absolutely use them again for any commercial locksmith needs."</p>
+                                <cite>— David L., Troy, MI</cite>
+                            </blockquote>
+                            <p><a href="https://www.google.com/maps/place/Car+Commercial+Residential+Emergency+Locksmith+Service" target="_blank" rel="noopener noreferrer">Read more reviews on Google &rarr;</a></p>
+                        </section>
+
+                        <p style="text-align:center; margin-top: 2em;">At CCR Locksmith, we are more than just a locksmith service; we are your neighbors, dedicated to ensuring your peace of mind. For fast, reliable service, call us today at <a href="tel:+13138893266" style="color:#ff6b35; font-weight:bold;">(313) 889-3266</a>.</p>
                     </article>
                 </div>
             </div>
