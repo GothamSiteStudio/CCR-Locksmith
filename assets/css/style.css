@@ -325,6 +325,39 @@ body.homepage #header {
   font-size: 18px;
 }
 
+a.trust-item-link {
+  text-decoration: none;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+a.trust-item-link:hover {
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+  transform: translateY(-1px);
+}
+
+a.trust-item-link .fa-google {
+  color: #4285F4;
+}
+
+#google-rating-value .fa-star,
+#google-rating-value .fa-star-half-alt {
+  color: #ffc107;
+  font-size: 14px;
+}
+
+#google-rating-value strong {
+  font-size: 0.95em;
+  margin: 0 0.15em;
+}
+
+.review-count {
+  font-weight: 400;
+  font-size: 0.85em;
+  opacity: 0.75;
+}
+
 /* Hero Banner Styles */
 .hero-banner {
   background: linear-gradient(
