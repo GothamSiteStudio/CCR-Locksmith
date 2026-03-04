@@ -2,7 +2,7 @@
 
 ## Project Overview
 This is a hybrid web project consisting of two distinct parts:
-1. **Main Site (Root)**: A static HTML/CSS/JS website hosted on Netlify.
+1. **Main Site (Root)**: A static HTML/CSS/JS website hosted on Cloudflare.
 2. **Blog (`/blog`)**: A modern Astro v5 application.
 
 ## 1. Main Site Architecture (Root)
@@ -21,8 +21,8 @@ This is a hybrid web project consisting of two distinct parts:
 
 ### Developer Workflow
 - **Run**: Open `index.html` directly in a browser or use a simple static server (e.g., Live Server).
-- **Deploy**: Pushing to `main` triggers a Netlify deployment.
-- **Forms**: Uses Netlify Forms (attributes `netlify` or `data-netlify="true"` in `<form>`).
+- **Deploy**: Deploy through Cloudflare Pages project settings/CI.
+- **Forms**: Contact forms are plain HTML and require a dedicated backend/provider if submissions are needed.
 
 ## 2. Blog Architecture (`/blog`)
 - **Framework**: Astro v5.
@@ -56,5 +56,5 @@ This is a hybrid web project consisting of two distinct parts:
   - Requires a global find-and-replace across all `.html` files.
 
 ## 5. Tech Stack
-- **Root**: HTML5, CSS3, jQuery, Netlify Forms.
+- **Root**: HTML5, CSS3, jQuery.
 - **Blog**: Astro, React (potentially), TypeScript.

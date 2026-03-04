@@ -1,6 +1,6 @@
 /**
  * Google Reviews Widget
- * Fetches real verified Google reviews via Netlify serverless function
+ * Fetches real verified Google reviews via Cloudflare Pages Function
  * and displays them in a scrolling carousel in the header area.
  */
 (function () {
@@ -144,7 +144,7 @@
   }
 
   /**
-   * Fetch reviews from Netlify serverless function
+   * Fetch reviews from Cloudflare Pages Function
    */
   function fetchReviews() {
     var cached = sessionStorage.getItem('ccr_google_reviews');

@@ -15,16 +15,37 @@ export async function onRequestGet(context) {
 
   const API_KEY = env.GOOGLE_PLACES_API_KEY;
   const PLACE_ID = env.GOOGLE_PLACE_ID;
+  const ALLOWED_ORIGIN = env.ALLOWED_ORIGIN || 'https://www.carcommercialresidentialemergencylocksmithservice.com';
+  const requestOrigin = context.request.headers.get('Origin') || '';
 
   const headers = {
     'Content-Type': 'application/json',
     'Cache-Control': 'public, max-age=21600, s-maxage=21600',
-    'Access-Control-Allow-Origin': '*',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
   };
+
+  if (requestOrigin && requestOrigin !== ALLOWED_ORIGIN) {
+    return new Response(
+      JSON.stringify({ error: 'Forbidden origin' }),
+      {
+        status: 403,
+        headers: {
+          ...headers,
+          'Cache-Control': 'no-store',
+        },
+      }
+    );
+  }
+
+  if (requestOrigin === ALLOWED_ORIGIN) {
+    headers['Access-Control-Allow-Origin'] = ALLOWED_ORIGIN;
+    headers.Vary = 'Origin';
+  }
 
   if (!API_KEY || !PLACE_ID) {
     return new Response(
-      JSON.stringify({ error: 'Missing server configuration (GOOGLE_PLACES_API_KEY or GOOGLE_PLACE_ID)' }),
+      JSON.stringify({ error: 'Server configuration missing' }),
       { status: 500, headers }
     );
   }
@@ -42,12 +63,10 @@ export async function onRequestGet(context) {
     });
 
     if (!googleResponse.ok) {
-      const errorText = await googleResponse.text();
       return new Response(
         JSON.stringify({
-          error: 'Google API error',
+          error: 'Upstream reviews provider failed',
           status: googleResponse.status,
-          message: errorText,
         }),
         { status: 502, headers }
       );
