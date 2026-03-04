@@ -3,11 +3,11 @@
  * 
  * Route: /api/google-reviews
  * 
- * Fetches real Google reviews while keeping the API key secret.
+ * Fetches real Google reviews using Places API (New) while keeping the API key secret.
  * 
  * Required Cloudflare Pages Environment Variables (set in Dashboard):
  *   - GOOGLE_PLACES_API_KEY (encrypted): Your Google Places API key
- *   - GOOGLE_PLACE_ID: ChIJf6Gqv77Mc2cR9yV2zeSdS2E
+ *   - GOOGLE_PLACE_ID: ChIJf6Gqv77Mc2cR9yV2zeSdSmE
  */
 
 export async function onRequestGet(context) {
@@ -16,7 +16,6 @@ export async function onRequestGet(context) {
   const API_KEY = env.GOOGLE_PLACES_API_KEY;
   const PLACE_ID = env.GOOGLE_PLACE_ID;
 
-  // CORS headers (same-origin so not strictly needed, but good practice)
   const headers = {
     'Content-Type': 'application/json',
     'Cache-Control': 'public, max-age=21600, s-maxage=21600',
@@ -31,38 +30,41 @@ export async function onRequestGet(context) {
   }
 
   try {
-    const googleUrl =
-      'https://maps.googleapis.com/maps/api/place/details/json' +
-      '?place_id=' + encodeURIComponent(PLACE_ID) +
-      '&fields=rating,user_ratings_total,reviews' +
-      '&reviews_sort=newest' +
-      '&key=' + API_KEY;
+    // Use Places API (New) - the legacy API does not find this Place ID
+    const googleUrl = 'https://places.googleapis.com/v1/places/' + PLACE_ID;
 
-    const googleResponse = await fetch(googleUrl);
-    const googleData = await googleResponse.json();
+    const googleResponse = await fetch(googleUrl, {
+      method: 'GET',
+      headers: {
+        'X-Goog-Api-Key': API_KEY,
+        'X-Goog-FieldMask': 'id,displayName,rating,userRatingCount,reviews',
+      },
+    });
 
-    if (googleData.status !== 'OK') {
+    if (!googleResponse.ok) {
+      const errorText = await googleResponse.text();
       return new Response(
         JSON.stringify({
           error: 'Google API error',
-          status: googleData.status,
-          message: googleData.error_message || '',
+          status: googleResponse.status,
+          message: errorText,
         }),
         { status: 502, headers }
       );
     }
 
-    const result = googleData.result;
+    const googleData = await googleResponse.json();
+
     const responseData = {
-      rating: result.rating,
-      totalReviews: result.user_ratings_total,
-      reviews: (result.reviews || []).map(function (review) {
+      rating: googleData.rating,
+      totalReviews: googleData.userRatingCount,
+      reviews: (googleData.reviews || []).map(function (review) {
         return {
-          author: review.author_name,
+          author: review.authorAttribution ? review.authorAttribution.displayName : 'Anonymous',
           rating: review.rating,
-          text: review.text,
-          time: review.relative_time_description,
-          profilePhoto: review.profile_photo_url,
+          text: review.text ? review.text.text : '',
+          time: review.relativePublishTimeDescription || '',
+          profilePhoto: review.authorAttribution ? review.authorAttribution.photoUri : '',
         };
       }),
       lastUpdated: new Date().toISOString(),

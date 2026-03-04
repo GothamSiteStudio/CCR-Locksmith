@@ -6,7 +6,7 @@
  * 
  * Required Cloudflare Environment Variables:
  *   - GOOGLE_API_KEY (Secret): Your Google Places API key
- *   - GOOGLE_PLACE_ID (Variable): ChIJf6Gqv77Mc2cR9yV2zeSdS2E
+ *   - GOOGLE_PLACE_ID (Variable): ChIJf6Gqv77Mc2cR9yV2zeSdSmE
  *   - ALLOWED_ORIGIN (Variable): https://www.carcommercialresidentialemergencylocksmithservice.com
  */
 

@@ -16,7 +16,7 @@
   var FALLBACK_REVIEW_COUNT = '150';
 
   // Google Maps review URL for the business
-  var GOOGLE_REVIEW_URL = 'https://search.google.com/local/reviews?placeid=ChIJf6Gqv77Mc2cR9yV2zeSdS2E';
+  var GOOGLE_REVIEW_URL = 'https://search.google.com/local/reviews?placeid=ChIJf6Gqv77Mc2cR9yV2zeSdSmE';
 
   // Auto-scroll interval (ms)
   var SCROLL_INTERVAL = 5000;
