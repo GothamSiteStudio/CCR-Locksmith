@@ -6,14 +6,14 @@
  * Fetches real Google reviews while keeping the API key secret.
  * 
  * Required Cloudflare Pages Environment Variables (set in Dashboard):
- *   - GOOGLE_API_KEY (encrypted): REDACTED_GOOGLE_API_KEY
+ *   - GOOGLE_PLACES_API_KEY (encrypted): Your Google Places API key
  *   - GOOGLE_PLACE_ID: ChIJf6Gqv77Mc2cR9yV2zeSdS2E
  */
 
 export async function onRequestGet(context) {
   const { env } = context;
 
-  const API_KEY = env.GOOGLE_API_KEY;
+  const API_KEY = env.GOOGLE_PLACES_API_KEY;
   const PLACE_ID = env.GOOGLE_PLACE_ID;
 
   // CORS headers (same-origin so not strictly needed, but good practice)
@@ -25,7 +25,7 @@ export async function onRequestGet(context) {
 
   if (!API_KEY || !PLACE_ID) {
     return new Response(
-      JSON.stringify({ error: 'Missing server configuration (GOOGLE_API_KEY or GOOGLE_PLACE_ID)' }),
+      JSON.stringify({ error: 'Missing server configuration (GOOGLE_PLACES_API_KEY or GOOGLE_PLACE_ID)' }),
       { status: 500, headers }
     );
   }
