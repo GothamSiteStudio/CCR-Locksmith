@@ -860,31 +860,135 @@ a.trust-item-link .fa-google {
 
 /* Service Locations */
 #service-locations {
-  background: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(245, 248, 251, 0.98) 100%
+  );
   padding: 4rem 0;
   margin-bottom: 0;
-  text-align: center;
+}
+
+#service-locations .container {
+  max-width: 1160px;
 }
 
 #service-locations h2 {
   color: var(--primary-color);
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  margin-bottom: 1rem;
+  font-size: 2.35rem;
+  margin-bottom: 0.85rem;
 }
 
 #service-locations .service-locations-header {
-  color: var(--secondary-color);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  max-width: 760px;
+  margin-inline: auto;
 }
 
 #service-locations .service-locations-description {
   font-size: 1.1rem;
   text-align: center;
+  margin: 0;
+  color: var(--text-light);
 }
 
-#service-locations .row {
-  gap: 1.5rem;
+#service-locations .service-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+  margin: 1.75rem 0 0;
+}
+
+#service-locations .service-locations-grid > * {
+  width: auto !important;
+  padding: 0;
+  margin: 0;
+}
+
+#service-locations .county-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 24px rgba(15, 34, 51, 0.1);
+  padding: 1.2rem 1.1rem;
+}
+
+#service-locations .county-card > div {
+  margin: 0 0 0.8rem;
+}
+
+#service-locations .county-card h3 {
+  color: var(--primary-color) !important;
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+#service-locations .city-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-count: 2;
+  column-gap: 1rem;
+}
+
+#service-locations .city-list li {
+  margin: 0 0 0.45rem;
+  break-inside: avoid;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--secondary-color);
+}
+
+#service-locations .city-list li:last-child {
+  margin-bottom: 0;
+}
+
+#service-locations .city-list a {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 59, 82, 0.38);
+  text-underline-offset: 0.18em;
+  border-bottom: 0;
+}
+
+#service-locations .city-list a:hover {
+  color: var(--primary-color);
+  text-decoration-color: rgba(15, 34, 51, 0.8);
+}
+
+#service-locations .city-list a:focus-visible {
+  outline: 2px solid rgba(242, 165, 50, 0.85);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1180px) {
+  #service-locations .service-locations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #service-locations .city-list {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  #service-locations .service-locations-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #service-locations h2 {
+    font-size: 2rem;
+  }
+
+  #service-locations .service-locations-description {
+    font-size: 1rem;
+  }
 }
 
 /* Service Area section on Automotive page */
@@ -902,19 +1006,56 @@ a.trust-item-link .fa-google {
   color: var(--white);
 }
 
-#service-locations h2 {
+#faqs {
+  margin-bottom: 0;
+}
+
+.recommended-partner {
+  margin-bottom: 0;
+  padding: 2.4rem 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 34, 51, 0.07) 0%,
+    rgba(31, 59, 82, 0.03) 100%
+  );
+  border-top: 1px solid rgba(15, 34, 51, 0.12);
+  border-bottom: 1px solid rgba(15, 34, 51, 0.12);
+}
+
+.recommended-partner .container {
+  max-width: 980px;
+}
+
+.recommended-partner p {
+  margin: 0;
   color: var(--primary-color);
-  margin-bottom: 1rem;
+  font-size: 1.04rem;
+  line-height: 1.8;
+  text-align: left;
 }
 
-#service-locations ul {
-  list-style: none;
-  padding: 0;
+.recommended-partner a {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+  border-bottom: 0;
 }
 
-#service-locations li {
-  font-weight: bold;
+.recommended-partner a:hover {
   color: var(--secondary-color);
+  text-decoration-color: var(--secondary-color);
+}
+
+@media (max-width: 736px) {
+  .recommended-partner {
+    padding: 1.8rem 0;
+  }
+
+  .recommended-partner p {
+    font-size: 1rem;
+  }
 }
 
 /* Footer Styles */
