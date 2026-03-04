@@ -100,6 +100,10 @@
   function setupAutoScroll(container, totalCards) {
     if (totalCards <= 1) return;
 
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
     var track = container.querySelector('.google-reviews-track');
     if (!track) return;
 
@@ -108,10 +112,16 @@
 
     container.addEventListener('mouseenter', function () { isPaused = true; });
     container.addEventListener('mouseleave', function () { isPaused = false; });
+    container.addEventListener('focusin', function () { isPaused = true; });
+    container.addEventListener('focusout', function () { isPaused = false; });
     container.addEventListener('touchstart', function () { isPaused = true; }, { passive: true });
     container.addEventListener('touchend', function () {
       setTimeout(function () { isPaused = false; }, 3000);
     }, { passive: true });
+
+    document.addEventListener('visibilitychange', function () {
+      isPaused = document.hidden;
+    });
 
     setInterval(function () {
       if (isPaused) return;
