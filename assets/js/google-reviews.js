@@ -1,15 +1,15 @@
 /**
  * Google Reviews Widget
- * Fetches real Google reviews from Cloudflare Worker proxy
- * and updates the trust bar + optional review carousel
+ * Fetches real verified Google reviews via Netlify serverless function
+ * and displays them in a scrolling carousel in the header area.
  */
 (function () {
   'use strict';
 
   // ============================================================
-  // CONFIGURATION — Update the worker URL after deploying
+  // CONFIGURATION
   // ============================================================
-  var WORKER_URL = 'https://google-reviews-proxy.YOUR-SUBDOMAIN.workers.dev';
+  var API_URL = '/api/google-reviews';
 
   // Fallback values (shown while loading or if API fails)
   var FALLBACK_RATING = '4.9';
@@ -17,6 +17,9 @@
 
   // Google Maps review URL for the business
   var GOOGLE_REVIEW_URL = 'https://search.google.com/local/reviews?placeid=ChIJf6Gqv77Mc2cR9yV2zeSdS2E';
+
+  // Auto-scroll interval (ms)
+  var SCROLL_INTERVAL = 5000;
 
   // ============================================================
 
@@ -33,6 +36,10 @@
     }
     if (hasHalf) {
       html += '<i class="fas fa-star-half-alt" style="color:#ffc107" aria-hidden="true"></i>';
+    }
+    var totalShown = fullStars + (hasHalf ? 1 : 0);
+    for (var j = totalShown; j < 5; j++) {
+      html += '<i class="far fa-star" style="color:#ffc107" aria-hidden="true"></i>';
     }
     return html;
   }
@@ -53,27 +60,65 @@
   }
 
   /**
-   * Populate the review carousel/section if it exists
+   * Populate the review carousel in the header area
    */
   function populateReviews(reviews) {
     var container = document.getElementById('google-reviews-container');
     if (!container || !reviews || reviews.length === 0) return;
 
-    var html = '';
-    reviews.forEach(function (review) {
-      if (review.rating < 4) return; // Only show 4-5 star reviews
+    var goodReviews = reviews.filter(function (r) { return r.rating >= 4; });
+    if (goodReviews.length === 0) return;
+
+    var html = '<div class="google-reviews-track">';
+    goodReviews.forEach(function (review) {
       html += '<div class="google-review-card">' +
-        '<div class="review-header">' +
-        (review.profilePhoto ? '<img src="' + review.profilePhoto + '" alt="" class="review-avatar" width="36" height="36" loading="lazy">' : '') +
+        '<div class="review-header-row">' +
+        (review.profilePhoto
+          ? '<img src="' + escapeHtml(review.profilePhoto) + '" alt="" class="review-avatar" width="40" height="40" loading="lazy">'
+          : '<div class="review-avatar-placeholder"><i class="fas fa-user"></i></div>') +
+        '<div class="review-meta">' +
         '<strong class="review-author">' + escapeHtml(review.author) + '</strong>' +
-        '<span class="review-time">' + escapeHtml(review.time) + '</span>' +
-        '</div>' +
         '<div class="review-stars">' + generateStars(review.rating) + '</div>' +
-        '<p class="review-text">' + escapeHtml(truncate(review.text, 180)) + '</p>' +
+        '</div>' +
+        '<img src="https://www.google.com/favicon.ico" alt="Verified Google Review" class="review-google-badge" width="16" height="16" title="Verified Google Review">' +
+        '</div>' +
+        '<p class="review-text">' + escapeHtml(truncate(review.text, 160)) + '</p>' +
+        '<span class="review-time">' + escapeHtml(review.time) + '</span>' +
         '</div>';
     });
+    html += '</div>';
 
     container.innerHTML = html;
+    container.style.display = 'block';
+
+    setupAutoScroll(container, goodReviews.length);
+  }
+
+  /**
+   * Auto-scroll through review cards
+   */
+  function setupAutoScroll(container, totalCards) {
+    if (totalCards <= 1) return;
+
+    var track = container.querySelector('.google-reviews-track');
+    if (!track) return;
+
+    var currentIndex = 0;
+    var isPaused = false;
+
+    container.addEventListener('mouseenter', function () { isPaused = true; });
+    container.addEventListener('mouseleave', function () { isPaused = false; });
+    container.addEventListener('touchstart', function () { isPaused = true; }, { passive: true });
+    container.addEventListener('touchend', function () {
+      setTimeout(function () { isPaused = false; }, 3000);
+    }, { passive: true });
+
+    setInterval(function () {
+      if (isPaused) return;
+      currentIndex = (currentIndex + 1) % totalCards;
+      var offset = currentIndex * 100;
+      track.style.transform = 'translateX(-' + offset + '%)';
+    }, SCROLL_INTERVAL);
   }
 
   function escapeHtml(str) {
@@ -89,15 +134,13 @@
   }
 
   /**
-   * Fetch reviews from Cloudflare Worker
+   * Fetch reviews from Netlify serverless function
    */
   function fetchReviews() {
-    // Check for cached data in sessionStorage (avoid multiple fetches per session)
     var cached = sessionStorage.getItem('ccr_google_reviews');
     if (cached) {
       try {
         var data = JSON.parse(cached);
-        // Use cache if less than 1 hour old
         if (data._fetchedAt && (Date.now() - data._fetchedAt) < 3600000) {
           updateTrustBar(data);
           populateReviews(data.reviews);
@@ -106,7 +149,7 @@
       } catch (e) { /* ignore parse errors */ }
     }
 
-    fetch(WORKER_URL)
+    fetch(API_URL)
       .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         return res.json();
@@ -119,7 +162,6 @@
       })
       .catch(function (err) {
         console.warn('Google Reviews fetch failed:', err.message);
-        // Keep fallback values — the HTML already shows them
       });
   }
 

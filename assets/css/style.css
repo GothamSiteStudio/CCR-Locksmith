@@ -358,6 +358,139 @@ a.trust-item-link .fa-google {
   opacity: 0.75;
 }
 
+/* =============================================
+   Google Verified Reviews Carousel
+   ============================================= */
+.google-reviews-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.6rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.google-reviews-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.google-review-card {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.review-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #868e96;
+  font-size: 18px;
+}
+
+.review-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.review-author {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.review-stars {
+  font-size: 12px;
+}
+
+.review-stars .fa-star,
+.review-stars .fa-star-half-alt {
+  color: #ffc107;
+}
+
+.review-google-badge {
+  margin-left: auto;
+  opacity: 0.8;
+}
+
+.review-text {
+  font-size: 0.82rem;
+  color: #495057;
+  margin: 0.2rem 0;
+  line-height: 1.4;
+  max-width: 600px;
+  font-style: italic;
+}
+
+.review-text::before {
+  content: '\201C';
+  font-size: 1.1em;
+  color: #868e96;
+}
+
+.review-text::after {
+  content: '\201D';
+  font-size: 1.1em;
+  color: #868e96;
+}
+
+.review-time {
+  font-size: 0.72rem;
+  color: #868e96;
+}
+
+@media (max-width: 768px) {
+  .google-reviews-section {
+    padding: 0.4rem 0;
+  }
+
+  .google-review-card {
+    padding: 0.4rem 1rem;
+  }
+
+  .review-text {
+    font-size: 0.78rem;
+    max-width: 90vw;
+  }
+
+  .review-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .review-avatar-placeholder {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+
 /* Hero Banner Styles */
 .hero-banner {
   background: linear-gradient(
