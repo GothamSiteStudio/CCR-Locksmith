@@ -19,6 +19,30 @@
 
 		};
 
+	// Ensure logo appears as favicon in browser tab.
+		(function() {
+			var scriptElement = document.currentScript;
+			var scriptSrc = scriptElement ? (scriptElement.getAttribute('src') || '') : '';
+			var faviconHref = 'images/favicon-logo.png';
+
+			if (scriptSrc.indexOf('../') === 0)
+				faviconHref = '../images/favicon-logo.png';
+			else if (scriptSrc.indexOf('/') === 0)
+				faviconHref = '/images/favicon-logo.png';
+
+			var $head = $('head');
+
+			if ($head.length === 0)
+				return;
+
+			var $icon = $head.find('link[rel*="icon"]').first();
+
+			if ($icon.length === 0)
+				$icon = $('<link rel="icon" type="image/png">').appendTo($head);
+
+			$icon.attr('href', faviconHref);
+		})();
+
 	// Breakpoints.
 		breakpoints({
 			wide:      [ '1281px',  '1680px' ],
