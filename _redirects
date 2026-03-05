@@ -7,6 +7,11 @@
 
 # Redirect index.html to root
 /index.html / 301
+/privacy /privacy-policy.html 301
+/privacy-policy /privacy-policy.html 301
+/terms /terms-of-service.html 301
+/terms-of-service /terms-of-service.html 301
+/warranty-policy /warranty-pricing-policy.html 301
 
 # ============================================
 # COMMERCIAL SERVICE REDIRECTS

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
@@ -8,15 +8,16 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-G1CZ4BTQTH');    
-    <!-- Microsoft Clarity -->
+            gtag('config', 'G-G1CZ4BTQTH');
+        </script>
+
+        <!-- Microsoft Clarity -->
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "v3l3frl9lq");
-    </script>
     </script>
     
     <!-- Preconnect to Google Fonts for faster loading -->
@@ -86,7 +87,6 @@
             font-weight: bold !important;
         }
     </style>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -102,7 +102,7 @@
         "postalCode": "48076",
         "addressCountry": "US"
       },
-      "openingHours": ["Mo-Su 00:00-23:59"],
+            "openingHours": ["Su-Th 06:30-23:30", "Fr 06:30-13:00"],
       "areaServed": ["Detroit, MI", "Southfield, MI", "Westland, MI", "Dearborn, MI", "Livonia, MI"]
     }
     </script>
@@ -210,7 +210,7 @@
             </div>
             <div class="trust-item">
                 <i class="fas fa-clock"></i>
-                <span>24/7 Response</span>
+                <span>24/7 Emergency Line</span>
             </div>
             <div class="trust-item">
                 <i class="fas fa-star"></i>
@@ -772,6 +772,12 @@
                                         <ul class="actions">
                                             <li><input type="submit" class="button" value="Submit" id="submitBtn" /></li>
                                         </ul>
+                                        <p style="margin-top: 0.75rem; font-size: 0.95rem; color: #555;">
+                                            By submitting, you agree to our
+                                            <a href="/privacy-policy.html">Privacy Policy</a>
+                                            and
+                                            <a href="/terms-of-service.html">Terms of Service</a>.
+                                        </p>
                                     </div>
                                 </div>
                             </form>
@@ -780,7 +786,7 @@
                             </div>
                             
                             <div style="padding: 20px; border-radius: 5px; margin-top: 20px;">
-                                <h3>📧 Alternative Contact Methods</h3>
+                                <h3>ðŸ“§ Alternative Contact Methods</h3>
                                 <p><strong>Prefer to email directly?</strong></p>
                                 <p>Send your message to: <a href="mailto:carcommercialresidentiallocks@gmail.com">carcommercialresidentiallocks@gmail.com</a></p>
                                 <p><strong>Need immediate help?</strong></p>
@@ -788,9 +794,6 @@
                             </div>
 
                             <script>
-                                // Initialize EmailJS
-                                emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this
-                                
                                 document.getElementById('contactForm').addEventListener('submit', function(event) {
                                     event.preventDefault();
                                     
@@ -806,13 +809,11 @@
                                         name: document.getElementById('name').value,
                                         email: document.getElementById('email').value,
                                         phone: document.getElementById('phone').value,
-                                        service: document.getElementById('service').value,
+                                        service: document.getElementById('service').value || 'General Inquiry',
                                         message: document.getElementById('message').value
                                     };
                                     
-                                    // Since EmailJS requires setup, let's use a simpler approach for now
-                                    // Create mailto link with all the information
-                                    const subject = encodeURIComponent(`New Contact Form Submission - ${formData.service || 'General Inquiry'}`);
+                                    const subject = encodeURIComponent(`New Contact Form Submission - ${formData.service}`);
                                     const body = encodeURIComponent(
                                         `Name: ${formData.name}\n` +
                                         `Email: ${formData.email}\n` +
@@ -821,19 +822,15 @@
                                         `Message:\n${formData.message}`
                                     );
                                     
-                                    // Open email client
-                                    window.open(`mailto:carcommercialresidentiallocks@gmail.com?subject=${subject}&body=${body}`);
+                                    window.location.href = `mailto:carcommercialresidentiallocks@gmail.com?subject=${subject}&body=${body}`;
                                     
-                                    // Show success message
                                     messageDiv.style.display = 'block';
                                     messageDiv.style.background = '#4CAF50';
                                     messageDiv.style.color = 'white';
-                                    messageDiv.innerHTML = '<h3>✓ Message Prepared!</h3><p>Your email client should open with the pre-filled message. Please send it from there.</p>';
+                                    messageDiv.innerHTML = '<h3>âœ“ Message Prepared!</h3><p>Your email client should open with the pre-filled message. Please send it from there.</p>';
                                     
-                                    // Reset form
                                     document.getElementById('contactForm').reset();
                                     
-                                    // Re-enable submit button
                                     submitBtn.value = 'Submit';
                                     submitBtn.disabled = false;
                                 });
@@ -845,27 +842,27 @@
                             <table>
                                 <tr>
                                     <td>Sunday</td>
-                                    <td>6:30 AM – 11:30 PM</td>
+                                    <td>6:30 AM â€“ 11:30 PM</td>
                                 </tr>
                                 <tr>
                                     <td>Monday</td>
-                                    <td>6:30 AM – 11:30 PM</td>
+                                    <td>6:30 AM â€“ 11:30 PM</td>
                                 </tr>
                                 <tr>
                                     <td>Tuesday</td>
-                                    <td>6:30 AM – 11:30 PM</td>
+                                    <td>6:30 AM â€“ 11:30 PM</td>
                                 </tr>
                                 <tr>
                                     <td>Wednesday</td>
-                                    <td>6:30 AM – 11:30 PM</td>
+                                    <td>6:30 AM â€“ 11:30 PM</td>
                                 </tr>
                                 <tr>
                                     <td>Thursday</td>
-                                    <td>6:30 AM – 11:30 PM</td>
+                                    <td>6:30 AM â€“ 11:30 PM</td>
                                 </tr>
                                 <tr>
                                     <td>Friday</td>
-                                    <td>6:30 AM – 1:00 PM</td>
+                                    <td>6:30 AM â€“ 1:00 PM</td>
                                 </tr>
                                 <tr>
                                     <td>Saturday</td>
@@ -923,6 +920,9 @@
                             <li><a href="/blog.html">Blog</a></li>
                             <li><a href="/service-areas.html">Service Areas</a></li>
                             <li><a href="/contact.html">Contact Us</a></li>
+                            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="/terms-of-service.html">Terms of Service</a></li>
+                            <li><a href="/warranty-pricing-policy.html">Warranty & Pricing Policy</a></li>
                             <li><a href="/automotive.html">Automotive Locksmith</a></li>
                             <li><a href="/residential.html">Residential Locksmith</a></li>
                             <li><a href="/commercial.html">Commercial Locksmith</a></li>
@@ -941,13 +941,13 @@
                         <div style="margin-top: 18px">
                             <strong>Business Hours:</strong>
                             <table>
-                                <tr><td>Sunday</td><td>6:30 AM – 11:30 PM</td></tr>
-                                <tr><td>Monday</td><td>6:30 AM – 11:30 PM</td></tr>
-                                <tr><td>Tuesday</td><td>6:30 AM – 11:30 PM</td></tr>
-                                <tr><td>Wednesday</td><td>6:30 AM – 11:30 PM</td></tr>
-                                <tr><td>Thursday</td><td>6:30 AM – 11:30 PM</td></tr>
-                                <tr><td>Friday</td><td>6:30 AM – 1:00 PM</td></tr>
-                                <tr><td>Saturday</td><td style="color: #888">Closed</td></tr>
+                                <tr><td>Sunday</td><td>6:30 AM â€“ 11:30 PM</td></tr>
+                                <tr><td>Monday</td><td>6:30 AM â€“ 11:30 PM</td></tr>
+                                <tr><td>Tuesday</td><td>6:30 AM â€“ 11:30 PM</td></tr>
+                                <tr><td>Wednesday</td><td>6:30 AM â€“ 11:30 PM</td></tr>
+                                <tr><td>Thursday</td><td>6:30 AM â€“ 11:30 PM</td></tr>
+                                <tr><td>Friday</td><td>6:30 AM â€“ 1:00 PM</td></tr>
+                                <tr><td>Saturday</td><td style="color: #888">Emergency service only</td></tr>
                             </table>
                         </div>
                         <div class="row gtr-25">
@@ -963,12 +963,12 @@
                 <div class="row">
                     <div class="col-12">
                         <section class="contact">
-                            <h3>Need help now? We’re available 24/7.</h3>
+                            <h3>Need help now? Weâ€™re available 24/7.</h3>
                             <a href="tel:+13138893266" class="button">Call (313) 889-3266</a>
                             <ul class="icons social-icons">
                                 <li><a href="https://www.facebook.com/profile.php?id=61579724369488" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
                                 <li><a href="https://www.instagram.com/ccrels.mi/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                                <li><a href="https://www.linkedin.com/company/ccr-locksmith" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
                             </ul>
                         </section>
                         <div class="copyright">
@@ -991,4 +991,5 @@
     <a class="call-now" href="tel:+13138893266">Call Now</a>
   </body>
 </html>
+
 
