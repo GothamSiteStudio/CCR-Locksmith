@@ -1,9 +1,7 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
-
-/* Base Styles & Variables */
+﻿/* Base Styles & Variables */
 :root {
-  --font-sans: "Manrope", sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Segoe UI", "Trebuchet MS", Helvetica, Arial, sans-serif;
   --primary-color: #0f2233;
   --secondary-color: #1f3b52;
   --accent-color: #f2a532;

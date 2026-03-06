@@ -19,29 +19,23 @@
 
 		};
 
-	// Ensure logo appears as favicon in browser tab.
-		(function() {
-			var scriptElement = document.currentScript;
-			var scriptSrc = scriptElement ? (scriptElement.getAttribute('src') || '') : '';
-			var faviconHref = 'images/favicon-logo.png';
+	function onWindowLoad(callback) {
+		if (document.readyState === 'complete') {
+			window.setTimeout(callback, 0);
+			return;
+		}
 
-			if (scriptSrc.indexOf('../') === 0)
-				faviconHref = '../images/favicon-logo.png';
-			else if (scriptSrc.indexOf('/') === 0)
-				faviconHref = '/images/favicon-logo.png';
+		$window.on('load', callback);
+	}
 
-			var $head = $('head');
+	function runWhenIdle(callback, timeout) {
+		if ('requestIdleCallback' in window) {
+			window.requestIdleCallback(callback, { timeout: timeout || 1500 });
+			return;
+		}
 
-			if ($head.length === 0)
-				return;
-
-			var $icon = $head.find('link[rel*="icon"]').first();
-
-			if ($icon.length === 0)
-				$icon = $('<link rel="icon" type="image/png">').appendTo($head);
-
-			$icon.attr('href', faviconHref);
-		})();
+		window.setTimeout(callback, 1);
+	}
 
 	// Breakpoints.
 		breakpoints({
@@ -53,14 +47,15 @@
 		});
 
 	// Play initial animations on page load.
-		$window.on('load', function() {
+		onWindowLoad(function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
 
 	// Scrolly.
-		$('.scrolly').scrolly();
+		if ($.fn.scrolly && $('.scrolly').length)
+			$('.scrolly').scrolly();
 
 	// Nav.
 
@@ -127,32 +122,37 @@
 
 					$items.addClass('loading');
 
-					$t.scrollex({
-						mode: 'middle',
-						top: '-20vh',
-						bottom: '-20vh',
-						enter: function() {
+					if ($.fn.scrollex) {
+						$t.scrollex({
+							mode: 'middle',
+							top: '-20vh',
+							bottom: '-20vh',
+							enter: function() {
 
-							var	timerId,
-								limit = $items.length - Math.ceil($window.width() / itemWidth);
+								var	timerId,
+									limit = $items.length - Math.ceil($window.width() / itemWidth);
 
-							timerId = window.setInterval(function() {
-								var x = $items.filter('.loading'), xf = x.first();
+								timerId = window.setInterval(function() {
+									var x = $items.filter('.loading'), xf = x.first();
 
-								if (x.length <= limit) {
+									if (x.length <= limit) {
 
-									window.clearInterval(timerId);
-									$items.removeClass('loading');
-									return;
+										window.clearInterval(timerId);
+										$items.removeClass('loading');
+										return;
 
-								}
+									}
 
-								xf.removeClass('loading');
+									xf.removeClass('loading');
 
-							}, settings.carousels.fadeDelay);
+								}, settings.carousels.fadeDelay);
 
-						}
-					});
+							}
+						});
+					}
+					else {
+						$items.removeClass('loading');
+					}
 
 				}
 
@@ -210,7 +210,7 @@
 					});
 
 			// Init.
-				$window.on('load', function() {
+				onWindowLoad(function() {
 
 					reelWidth = $reel[0].scrollWidth;
 
@@ -406,7 +406,7 @@
 	})();
 
 	// Global semantic and form accessibility enhancements.
-	(function() {
+	runWhenIdle(function() {
 		if (!document.documentElement.lang) {
 			document.documentElement.lang = 'en';
 		}
@@ -503,6 +503,6 @@
 				}
 			}
 		});
-	})();
+	}, 2000);
 
 })(jQuery);
