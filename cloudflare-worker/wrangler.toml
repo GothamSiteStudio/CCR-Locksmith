@@ -3,7 +3,7 @@ main = "google-reviews-worker.js"
 compatibility_date = "2024-01-01"
 
 [vars]
-GOOGLE_PLACE_ID = "ChIJf6Gqv77Mc2cR9yV2zeSdSmE"
+GOOGLE_PLACE_ID = "ChIJf6Gqv77Mc2cR9yV2zeSdS2E"
 ALLOWED_ORIGIN = "https://www.carcommercialresidentialemergencylocksmithservice.com"
 
 # GOOGLE_API_KEY is set as a SECRET via the dashboard or CLI:
