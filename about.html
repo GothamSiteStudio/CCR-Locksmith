@@ -8,7 +8,8 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-G1CZ4BTQTH');    
+      gtag('config', 'G-G1CZ4BTQTH');
+    </script>
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -16,7 +17,6 @@
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "v3l3frl9lq");
-    </script>
     </script>
     
     <!-- Preconnect to Google Fonts for faster loading -->
@@ -45,8 +45,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Preload critical fonts -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600&display=swap">
-    <link rel="preload" as="style" href="assets/css/fontawesome-all.min.css">
+    <!-- Preconnect for deferred resources -->
+    
+    <!-- Preload LCP background image -->
+    <link rel="preload" as="image" href="images/header.webp" type="image/webp">
     
     <!-- Critical CSS loaded normally -->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -54,7 +56,7 @@
     <!-- Non-critical CSS deferred -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600&display=swap" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/accessibility-improvements.css" media="print" onload="this.media='all'">
 
     <!-- Fallback for browsers without JS -->
@@ -180,7 +182,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="/index.html">
-                    <img src="images/Logo.png" alt="CCR Locksmith - 24/7 Emergency Services" />
+                    <img src="images/Logo.webp" alt="CCR Locksmith - 24/7 Emergency Services" />
                 </a>
             </div>
             <div class="quick-contact">

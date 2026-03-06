@@ -364,7 +364,7 @@ a.trust-item-link .fa-google {
     135deg,
     rgba(15, 34, 51, 0.88),
     rgba(31, 59, 82, 0.92)
-  ), url("../../images/locksmith-hero-banner-background.png") center center / cover no-repeat;
+  ), url("../../images/locksmith-hero-banner-background.webp") center center / cover no-repeat;
   color: var(--white);
   padding: 4rem 0;
   margin-bottom: 0;
