@@ -1,4 +1,4 @@
-User-agent: *
+const ROBOTS_TEXT = `User-agent: *
 Allow: /
 
 # Sitemap
@@ -99,3 +99,28 @@ Disallow: /
 
 User-agent: meta-externalagent
 Disallow: /
+`;
+
+const HEADERS = {
+  'Content-Type': 'text/plain; charset=UTF-8',
+  'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+  'X-Content-Type-Options': 'nosniff',
+};
+
+export function onRequest(context) {
+  const { method } = context.request;
+
+  if (method !== 'GET' && method !== 'HEAD') {
+    return new Response('Method Not Allowed', {
+      status: 405,
+      headers: {
+        Allow: 'GET, HEAD',
+      },
+    });
+  }
+
+  return new Response(method === 'HEAD' ? null : ROBOTS_TEXT, {
+    status: 200,
+    headers: HEADERS,
+  });
+}
